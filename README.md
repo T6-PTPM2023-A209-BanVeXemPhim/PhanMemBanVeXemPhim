@@ -1,22 +1,27 @@
 # Phần mềm bán vé xem phim
 <h2 align="center">👦 List of members 👦</h2>
 <body>
-    <div class="members">
-        <div class="member">
-            <img src="link_hinh_anh_1.jpg" alt="Hình ảnh thành viên 1">
-            <h3>Thành viên 1</h3>
-            <p>Tên: Tên thành viên 1</p>
-            <p>Tuổi: Tuổi thành viên 1</p>
-            <p>Vị trí: Vị trí hoặc vai trò</p>
-        </div>
-        <div class="member">
-            <img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2">
-            <h3>Thành viên 2</h3>
-            <p>Tên: Tên thành viên 2</p>
-            <p>Tuổi: Tuổi thành viên 2</p>
-            <p>Vị trí: Vị trí hoặc vai trò</p>
-        </div>
-    </div>
+    <table>
+        <tr>
+            <th></th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Vị trí</th>
+        </tr>
+        <tr>
+            <td><img src="link_hinh_anh_1.jpg" alt="Hình ảnh thành viên 1"></td>
+            <td>Thành viên 1</td>
+            <td>Tuổi thành viên 1</td>
+            <td>Vị trí hoặc vai trò</td>
+        </tr>
+        <tr>
+            <td><img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2"></td>
+            <td>Thành viên 2</td>
+            <td>Tuổi thành viên 2</td>
+            <td>Vị trí hoặc vai trò</td>
+        </tr>
+        <!-- Thêm các thành viên khác tại đây -->
+    </table>
 </body>
 <a href="#" target="_blank">
  
