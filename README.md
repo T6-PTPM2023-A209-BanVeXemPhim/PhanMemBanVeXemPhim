@@ -4,21 +4,27 @@
     <table>
         <tr>
             <th></th>
-            <th>Tên</th>
-            <th>Tuổi</th>
-            <th>Vị trí</th>
+            <th>Tên sinh viên</th>
+            <th>Modul</th>
+            <th>Đánh giá</th>
         </tr>
         <tr>
             <td><img src="link_hinh_anh_1.jpg" alt="Hình ảnh thành viên 1"></td>
-            <td>Thành viên 1</td>
-            <td>Tuổi thành viên 1</td>
-            <td>Vị trí hoặc vai trò</td>
+            <td>Tên sinh viên 1</td>
+            <td>Modul 1</td>
+            <td>Đánh giá</td>
         </tr>
         <tr>
             <td><img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2"></td>
-            <td>Thành viên 2</td>
-            <td>Tuổi thành viên 2</td>
-            <td>Vị trí hoặc vai trò</td>
+            <td>Tên sinh viên 2</td>
+            <td>Modul 2</td>
+            <td>Đánh giá</td>
+        </tr>
+        <tr>
+            <td><img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2"></td>
+            <td>Tên sinh viên 2</td>
+            <td>Modul 2</td>
+            <td>Đánh giá</td>
         </tr>
         <!-- Thêm các thành viên khác tại đây -->
     </table>
