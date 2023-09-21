@@ -52,8 +52,33 @@
 
 <br>
 <h2 align="center">🔥 Contents and Division of Topics 🔥</h2>
-<br>
+<h4>App</h4>
+<table>
+    <tr>
+        <td>1</td>
+        <td>Quản lý vé</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Tài khoản người dùng</td>
+    </tr>
+</table>
 
+<h4>Web</h4>
+<table>
+    <tr>
+        <td>1</td>
+        <td>Đặt vé online</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Đăng ký tài khoản</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Tìm kiếm vé</td>
+    </tr>
+</table>
 <br>
 
 <h2 align="center">📖 Bibliography 📖</h2>
