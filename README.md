@@ -79,6 +79,8 @@
         <td>Tìm kiếm vé</td>
     </tr>
 </table>
+
+<h4>AI: Đề xuất vé theo sở thích khách hàng</h4>
 <br>
 
 <h2 align="center">📖 Bibliography 📖</h2>
