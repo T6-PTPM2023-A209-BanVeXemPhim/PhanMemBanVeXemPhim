@@ -10,20 +10,20 @@
         </tr>
         <tr>
             <td><img src="link_hinh_anh_1.jpg" alt="Hình ảnh thành viên 1"></td>
-            <td>Tên sinh viên 1</td>
+            <td>Lê Thanh Tân</td>
             <td>Modul 1</td>
             <td>Đánh giá</td>
         </tr>
         <tr>
             <td><img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2"></td>
-            <td>Tên sinh viên 2</td>
+            <td>Danh Hoàng Sơn</td>
             <td>Modul 2</td>
             <td>Đánh giá</td>
         </tr>
         <tr>
             <td><img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2"></td>
-            <td>Tên sinh viên 2</td>
-            <td>Modul 2</td>
+            <td>Nguyễn Tấn Phát</td>
+            <td>Modul 3</td>
             <td>Đánh giá</td>
         </tr>
         <!-- Thêm các thành viên khác tại đây -->
