@@ -1,7 +1,7 @@
 # Phần mềm bán vé xem phim
 <h2 align="center">👦 List of members 👦</h2>
 <body>
-   <table>
+   <table align="center">
     <tr>
         <td>
             <div class="member">
