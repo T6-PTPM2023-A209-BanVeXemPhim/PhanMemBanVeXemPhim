@@ -5,10 +5,9 @@
     <tr>
         <td>
             <div class="member">
-                <img src="link_hinh_anh_1.jpg" alt="Hình ảnh thành viên 1">
+                <img src="link_hinh_anh_1.jpg" alt="Lê Thanh Tân">
                 <div class="member-info">
                     <p>MSSV: 2001200092</p>
-                    <p>Tên sinh viên: Lê Thanh Tân</p>
                     <p>Modul: Modul 1</p>
                     <p>Đánh giá: Đánh giá</p>
                 </div>
@@ -16,10 +15,9 @@
         </td>
         <td>
             <div class="member">
-                <img src="son.jpg" alt="Hình ảnh thành viên 2">
+                <img src="son.jpg" alt="Danh Hoàng Sơn">
                 <div class="member-info">
                     <p>MSSV: 2001190785</p>
-                    <p>Tên sinh viên: Danh Hoàng Sơn</p>
                     <p>Modul: Modul 2</p>
                     <p>Đánh giá: Đánh giá</p>
                 </div>
@@ -27,10 +25,9 @@
         </td>
         <td>
             <div class="member">
-                <img src="link_hinh_anh_3.jpg" alt="Hình ảnh thành viên 3">
+                <img src="link_hinh_anh_3.jpg" alt="Nguyễn Tấn Phát">
                 <div class="member-info">
                     <p>MSSV: 2001200093</p>
-                    <p>Tên sinh viên: Nguyễn Tấn Phát</p>
                     <p>Modul: Modul 3</p>
                     <p>Đánh giá: Đánh giá</p>
                 </div>
