@@ -1,36 +1,43 @@
 # Phần mềm bán vé xem phim
 <h2 align="center">👦 List of members 👦</h2>
 <body>
-    <table>
-        <tr>
-            <th>MSSV</th>
-            <th>Tên sinh viên</th>
-            <th>Modul</th>
-            <th>Đánh giá</th>
-        </tr>
-        <tr>
-            <!-- <td><img src="link_hinh_anh_1.jpg" alt="Hình ảnh thành viên 1"></td> -->
-            <td>2001200092</td>
-            <td>Lê Thanh Tân</td>
-            <td>Modul 1</td>
-            <td>Đánh giá</td>
-        </tr>
-        <tr>
-            <!-- <td><img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2"></td> -->
-            <td>2001190785</td>
-            <td>Danh Hoàng Sơn</td>
-            <td>Modul 2</td>
-            <td>Đánh giá</td>
-        </tr>
-        <tr>
-            <!-- <td><img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2"></td> -->
-            <td>2001200093</td>
-            <td>Nguyễn Tấn Phát</td>
-            <td>Modul 3</td>
-            <td>Đánh giá</td>
-        </tr>
-        <!-- Thêm các thành viên khác tại đây -->
-    </table>
+   <table>
+    <tr>
+        <td>
+            <div class="member">
+                <img src="link_hinh_anh_1.jpg" alt="Hình ảnh thành viên 1">
+                <div class="member-info">
+                    <p>MSSV: 2001200092</p>
+                    <p>Tên sinh viên: Lê Thanh Tân</p>
+                    <p>Modul: Modul 1</p>
+                    <p>Đánh giá: Đánh giá</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="member">
+                <img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2">
+                <div class="member-info">
+                    <p>MSSV: 2001190785</p>
+                    <p>Tên sinh viên: Danh Hoàng Sơn</p>
+                    <p>Modul: Modul 2</p>
+                    <p>Đánh giá: Đánh giá</p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="member">
+                <img src="link_hinh_anh_3.jpg" alt="Hình ảnh thành viên 3">
+                <div class="member-info">
+                    <p>MSSV: 2001200093</p>
+                    <p>Tên sinh viên: Nguyễn Tấn Phát</p>
+                    <p>Modul: Modul 3</p>
+                    <p>Đánh giá: Đánh giá</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
 </body>
 <a href="#" target="_blank">
  
