@@ -16,7 +16,7 @@
         </td>
         <td>
             <div class="member">
-                <img src="link_hinh_anh_2.jpg" alt="Hình ảnh thành viên 2">
+                <img src="son.jpg" alt="Hình ảnh thành viên 2">
                 <div class="member-info">
                     <p>MSSV: 2001190785</p>
                     <p>Tên sinh viên: Danh Hoàng Sơn</p>
