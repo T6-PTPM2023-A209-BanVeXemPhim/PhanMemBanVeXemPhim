@@ -5,7 +5,7 @@
     <tr>
         <td>
             <div class="member">
-                <img src="son.jpg" alt="Lê Thanh Tân">
+                <img src="tan.jpg" alt="Lê Thanh Tân">
                 <div class="member-info">
                     <p>MSSV: 2001200092</p>
                     <p>Modul: Modul 1</p>
