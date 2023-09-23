@@ -5,8 +5,9 @@
     <tr>
         <td>
             <div class="member">
-                <img src="tan.jpg" alt="Lê Thanh Tân" width="100px">
+                <img src="tan.jpg"  width="100px">
                 <div class="member-info">
+                   <p>Lê Thanh Tân</p>
                     <p>MSSV: 2001200092</p>
                     <p>Modul: Modul 1</p>
                     <p>Đánh giá: Đánh giá</p>
@@ -15,8 +16,9 @@
         </td>
         <td>
             <div class="member">
-                <img src="son.jpg" alt="Danh Hoàng Sơn" width="100px">
+                <img src="son.jpg"  width="100px">
                 <div class="member-info">
+                   <p>Danh Hoàng Sơn</p>
                     <p>MSSV: 2001190785</p>
                     <p>Modul: Modul 2</p>
                     <p>Đánh giá: Đánh giá</p>
