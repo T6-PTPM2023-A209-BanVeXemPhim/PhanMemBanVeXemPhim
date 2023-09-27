@@ -27,8 +27,9 @@
         </td>
         <td>
             <div class="member">
-                <img src="link_hinh_anh_3.jpg" alt="Nguyễn Tấn Phát">
+                <img src="phat.jpg" width="100px">
                 <div class="member-info">
+                    <p>Nguyễn Tấn Phát</p>
                     <p>MSSV: 2001200093</p>
                     <p>Modul: Modul 3</p>
                     <p>Đánh giá: Đánh giá</p>
