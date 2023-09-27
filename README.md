@@ -4,7 +4,7 @@
    <table align="center">
     <tr>
         <td>
-            <div class="member">
+            <div class="member"align="center">
                 <img src="tan.jpg"  width="100px">
                 <div class="member-info">
                    <p>Lê Thanh Tân</p>
@@ -15,7 +15,7 @@
             </div>
         </td>
         <td>
-            <div class="member">
+            <div class="member"align="center">
                 <img src="son.jpg"  width="100px">
                 <div class="member-info">
                    <p>Danh Hoàng Sơn</p>
@@ -26,7 +26,7 @@
             </div>
         </td>
         <td>
-            <div class="member">
+            <div class="member"align="center">
                 <img src="phat.jpg" width="100px">
                 <div class="member-info">
                     <p>Nguyễn Tấn Phát</p>
