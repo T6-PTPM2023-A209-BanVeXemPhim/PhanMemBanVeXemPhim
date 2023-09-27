@@ -5,7 +5,7 @@
     <tr>
         <td>
             <div class="member">
-                <img src="../PhanMemBanVeXemPhim/Members_Profile/tan.jpg"  width="100px">
+                <img src="../Members_Profile/tan.jpg"  width="100px">
                 <div class="member-info">
                    <p>Lê Thanh Tân</p>
                     <p>MSSV: 2001200092</p>
@@ -16,7 +16,7 @@
         </td>
         <td>
             <div class="member">
-                <img src="../PhanMemBanVeXemPhim/Members_Profile/son.jpg"  width="100px">
+                <img src="../Members_Profile/son.jpg"  width="100px">
                 <div class="member-info">
                    <p>Danh Hoàng Sơn</p>
                     <p>MSSV: 2001190785</p>
@@ -27,7 +27,7 @@
         </td>
         <td>
             <div class="member">
-                <img src="../PhanMemBanVeXemPhim/Members_Profile/phat.jpg" width="100px">
+                <img src="../phat.jpg" width="100px">
                 <div class="member-info">
                     <p>Nguyễn Tấn Phát</p>
                     <p>MSSV: 2001200093</p>
