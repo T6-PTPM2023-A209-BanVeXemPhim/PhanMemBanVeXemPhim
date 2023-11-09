@@ -9,7 +9,7 @@
                 <div class="member-info">
                    <p>Lê Thanh Tân</p>
                     <p>MSSV: 2001200092</p>
-                    <p>Modul: Modul 1</p>
+                    <p>Modul: Quản lý vé, AI</p>
                     <p>Đánh giá: Đánh giá</p>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 <div class="member-info">
                    <p>Danh Hoàng Sơn</p>
                     <p>MSSV: 2001190785</p>
-                    <p>Modul: Modul 2</p>
+                    <p>Modul: Đặt vé, tìm kiếm phim</p>
                     <p>Đánh giá: Đánh giá</p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="member-info">
                     <p>Nguyễn Tấn Phát</p>
                     <p>MSSV: 2001200093</p>
-                    <p>Modul: Modul 3</p>
+                    <p>Modul: Đăng ký, quản lý người dùng</p>
                     <p>Đánh giá: Đánh giá</p>
                 </div>
             </div>
