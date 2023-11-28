@@ -9,7 +9,7 @@
                 <div class="member-info">
                    <p>Lê Thanh Tân</p>
                     <p>MSSV: 2001200092</p>
-                    <p>Modul: Quản lý vé, AI</p>
+                    <p>Modul: Quản lý phim, AI</p>
                     <p>Đánh giá: Đánh giá</p>
                 </div>
             </div>
