@@ -1,0 +1,13 @@
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\bin\Debug\GUI.exe.config
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\bin\Debug\GUI.exe
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\bin\Debug\GUI.pdb
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\bin\Debug\DAL_BLL.dll
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\bin\Debug\DAL_BLL.pdb
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_DangNhap.resources
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.exe
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.pdb
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Config.resources
+D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Main.resources
