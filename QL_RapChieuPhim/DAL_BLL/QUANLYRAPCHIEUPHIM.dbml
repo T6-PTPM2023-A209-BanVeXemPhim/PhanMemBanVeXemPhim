@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QUANLYRAPCHIEUPHIM" Class="QUANLYRAPCHIEUPHIMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-EKGAA51;Initial Catalog=QUANLYRAPCHIEUPHIM;User ID=sa" SettingsObjectName="DAL_BLL.Properties.Settings" SettingsPropertyName="QUANLYRAPCHIEUPHIMConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-EKGAA51;Initial Catalog=QUANLYRAPCHIEUPHIM;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL_BLL.Properties.Settings" SettingsPropertyName="QUANLYRAPCHIEUPHIMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BinhLuan" Member="BinhLuans">
     <Type Name="BinhLuan">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -151,6 +151,7 @@
       <Association Name="TaiKhoan_Ve" Member="Ves" ThisKey="Id" OtherKey="IdTaiKhoan" Type="Ve" />
       <Association Name="TaiKhoan_DatVe" Member="DatVes" ThisKey="Id" OtherKey="IDTK" Type="DatVe" />
       <Association Name="ThongTin_TaiKhoan" Member="ThongTin" ThisKey="id_ThongTin" OtherKey="ThongTin_id" Type="ThongTin" IsForeignKey="true" />
+      <Association Name="Quyen_TaiKhoan" Member="Quyen" ThisKey="PhanQuyen" OtherKey="Id" Type="Quyen" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ThongTin" Member="ThongTins">
@@ -162,6 +163,13 @@
       <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="ThongTin_TaiKhoan" Member="TaiKhoans" ThisKey="ThongTin_id" OtherKey="id_ThongTin" Type="TaiKhoan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Quyen" Member="Quyens">
+    <Type Name="Quyen">
+      <Column Name="Id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenQuyen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Quyen_TaiKhoan" Member="TaiKhoans" ThisKey="Id" OtherKey="PhanQuyen" Type="TaiKhoan" />
     </Type>
   </Table>
 </Database>

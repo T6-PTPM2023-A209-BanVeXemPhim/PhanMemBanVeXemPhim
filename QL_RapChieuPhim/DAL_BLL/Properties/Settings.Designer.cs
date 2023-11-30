@@ -25,8 +25,8 @@ namespace DAL_BLL.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-EKGAA51;Initial Catalog=QUANLYRAPCHIEUPHIM;User ID=sa;Passwor" +
-            "d=123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-EKGAA51;Initial Catalog=QUANLYRAPCHIEUPHIM;Persist Security I" +
+            "nfo=True;User ID=sa;Password=123")]
         public string QUANLYRAPCHIEUPHIMConnectionString {
             get {
                 return ((string)(this["QUANLYRAPCHIEUPHIMConnectionString"]));

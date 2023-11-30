@@ -11,3 +11,16 @@ D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.exe
 D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.pdb
 D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Config.resources
 D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Main.resources
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\GUI.exe.config
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.exe
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.pdb
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\GUI.exe
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\GUI.pdb
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\DAL_BLL.dll
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\DAL_BLL.pdb
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Config.resources
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_DangNhap.resources
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Main.resources
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
