@@ -11,6 +11,7 @@ D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.exe
 D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.pdb
 D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Config.resources
 D:\Visual_Studio\PTPM\DoAn\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Main.resources
+<<<<<<< Updated upstream
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\GUI.exe.config
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.exe
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.pdb
@@ -24,3 +25,31 @@ D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_DangNhap.re
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Main.resources
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Properties.Resources.resources
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+=======
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\GUI.exe.config
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\GUI.exe
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\GUI.pdb
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\DAL_BLL.dll
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\DAL_BLL.pdb
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\DAL_BLL.dll.config
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Config.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_DangNhap.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Main.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.exe
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.pdb
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_LichChieu.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_ChonPhim.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_Phim.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_QLKhachHang.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_QuanLyNhanVien.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_TimKiemKhachHang.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_TimKiemNhanVien.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_TimKiemPhim.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_TimKiemVe.resources
+D:\PTPM_UDTM\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.frm_Ve.resources
+>>>>>>> Stashed changes
