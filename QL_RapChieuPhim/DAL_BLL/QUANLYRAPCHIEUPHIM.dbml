@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QUANLYRAPCHIEUPHIM" Class="QUANLYRAPCHIEUPHIMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-<<<<<<< Updated upstream
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-EKGAA51;Initial Catalog=QUANLYRAPCHIEUPHIM;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL_BLL.Properties.Settings" SettingsPropertyName="QUANLYRAPCHIEUPHIMConnectionString" Provider="System.Data.SqlClient" />
-=======
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-J2AM46I7\SQLEXPRESS;Initial Catalog=QUANLYRAPCHIEUPHIM;User ID=sa" SettingsObjectName="DAL_BLL.Properties.Settings" SettingsPropertyName="QUANLYRAPCHIEUPHIMConnectionString" Provider="System.Data.SqlClient" />
->>>>>>> Stashed changes
   <Table Name="dbo.BinhLuan" Member="BinhLuans">
     <Type Name="BinhLuan">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
