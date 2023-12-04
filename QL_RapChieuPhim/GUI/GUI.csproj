@@ -65,6 +65,18 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_QLLichChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLLichChieu.Designer.cs">
+      <DependentUpon>Form_QLLichChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_QLPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLPhim.Designer.cs">
+      <DependentUpon>Form_QLPhim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_QLTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLLichChieu.resx">
+      <DependentUpon>Form_QLLichChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLPhim.resx">
+      <DependentUpon>Form_QLPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_QLTaiKhoan.resx">
       <DependentUpon>Form_QLTaiKhoan.cs</DependentUpon>

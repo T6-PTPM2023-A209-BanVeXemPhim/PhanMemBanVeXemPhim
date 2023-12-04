@@ -28,5 +28,11 @@ namespace GUI
         {
 
         }
+
+        private void phimToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.frmPhim = new Form_QLPhim();
+            Program.frmPhim.Visible = true;
+        }
     }
 }

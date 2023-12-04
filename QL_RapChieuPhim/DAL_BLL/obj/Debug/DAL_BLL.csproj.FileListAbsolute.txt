@@ -13,3 +13,8 @@ D:\Visual_Studio\PTPM\QL_RapChieuPhim\DAL_BLL\bin\Debug\DAL_BLL.dll
 D:\Visual_Studio\PTPM\QL_RapChieuPhim\DAL_BLL\bin\Debug\DAL_BLL.pdb
 D:\Visual_Studio\PTPM\QL_RapChieuPhim\DAL_BLL\obj\Debug\DAL_BLL.dll
 D:\Visual_Studio\PTPM\QL_RapChieuPhim\DAL_BLL\obj\Debug\DAL_BLL.pdb
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\DAL_BLL\bin\Debug\DAL_BLL.dll.config
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\DAL_BLL\bin\Debug\DAL_BLL.dll
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\DAL_BLL\bin\Debug\DAL_BLL.pdb
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\DAL_BLL\obj\Debug\DAL_BLL.dll
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\DAL_BLL\obj\Debug\DAL_BLL.pdb

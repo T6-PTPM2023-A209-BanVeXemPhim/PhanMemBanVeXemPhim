@@ -11,7 +11,8 @@ namespace GUI
         public static Form_DangNhap frmDangNhap = null;
         public static Form_Main frmMain = null;
         public static Form_Config frmConfig = null;
-
+        public static Form_QLPhim frmPhim = null;
+        public static Form_QLLichChieu frmQLLC = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,7 +22,10 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmDangNhap = new Form_DangNhap();
-            Application.Run(frmDangNhap);
+           // frmPhim = new Form_QLPhim();
+            frmQLLC = new Form_QLLichChieu();
+
+            Application.Run(frmQLLC);
         }
     }
 }
