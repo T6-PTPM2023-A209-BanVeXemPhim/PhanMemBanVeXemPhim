@@ -1,0 +1,4 @@
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\bin\Debug\Controls.dll
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\bin\Debug\Controls.pdb
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\obj\Debug\Controls.dll
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\obj\Debug\Controls.pdb

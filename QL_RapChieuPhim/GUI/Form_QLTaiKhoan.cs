@@ -15,6 +15,7 @@ namespace GUI
     {
         TaiKhoanBLL taikhoan = new TaiKhoanBLL();
         QuyenBLL quyen = new QuyenBLL();
+        ThongTinBLL thongtin = new ThongTinBLL();
 
         public Form_QLTaiKhoan()
         {
@@ -26,7 +27,9 @@ namespace GUI
         {
             Load_Data();
             Load_Combobox();
+            Load_NguoiDung();
             Set_Form(false);
+            Set_Form1(false);
         }
 
         void Load_Data()
@@ -34,11 +37,24 @@ namespace GUI
             dtg_TK.DataSource = taikhoan.Get_TaiKhoan();
         }
 
+        void Load_NguoiDung()
+        {
+            dtg_tt.DataSource = thongtin.Get_ThongTin();
+        }
+
+        void Load_NguoiDung(int ID)
+        {
+            dtg_tt.DataSource = thongtin.Get_ThongTin(ID);
+        }
+
         void Load_Combobox()
         {
             cmb_quyen.DataSource = quyen.Get_Quyen();
             cmb_quyen.ValueMember = "Id";
             cmb_quyen.DisplayMember = "TenQuyen";
+
+            cmb_gt.Items.Add("Nam");
+            cmb_gt.Items.Add("Nữ");
         }
 
         void Set_ButtunTrangThai(string t)
@@ -63,6 +79,15 @@ namespace GUI
             cmb_quyen.Enabled = b;
         }
 
+        void Set_Form1(bool b)
+        {
+            txt_hoten.Enabled = b;
+            txt_diachi.Enabled = b;
+            date_ngaysinh.Enabled = b;
+            txt_email.Enabled = b;
+            cmb_gt.Enabled = b;
+        }
+
         private void dtg_TK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = dtg_TK.CurrentCell.RowIndex;
@@ -72,6 +97,8 @@ namespace GUI
             date_ngaydk.Text = dtg_TK.Rows[row].Cells[3].Value.ToString();
             Set_ButtunTrangThai(dtg_TK.Rows[row].Cells[4].Value.ToString());
             cmb_quyen.SelectedValue = dtg_TK.Rows[row].Cells[5].Value.ToString();
+
+            Load_NguoiDung(int.Parse(dtg_TK.Rows[row].Cells[0].Value.ToString()));
         }
 
         private void cmb_quyen_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,20 +172,61 @@ namespace GUI
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Bạn có muốn xóa?", "Thông Báo", MessageBoxButtons.YesNo);
-            if (d == DialogResult.Yes)
+            if (btn_xoa.Text == "Hủy")
             {
-                int ID = int.Parse(dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                if (taikhoan.Delete_TaiKhoan(ID))
-                {
-                    MessageBox.Show("Xóa tài khoản thành công");
-                    Load_Data();
-                }
-                else
-                    MessageBox.Show("Xóa tài khoản thất bại");
+                btn_sua.Text = "Sửa";
+                Set_Form(false);
+                btn_xoa.Text = "Xóa";
             }
             else
-                return;
+            {
+                DialogResult d = MessageBox.Show("Bạn có muốn xóa?", "Thông Báo", MessageBoxButtons.YesNo);
+                if (d == DialogResult.Yes)
+                {
+                    int ID = int.Parse(dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                    if (taikhoan.Delete_TaiKhoan(ID))
+                    {
+                        MessageBox.Show("Xóa tài khoản thành công");
+                        Load_Data();
+                    }
+                    else
+                        MessageBox.Show("Xóa tài khoản thất bại");
+                }
+                else
+                    return;
+            }
+        }
+
+        private void btn_tt_Click(object sender, EventArgs e)
+        {
+            Load_NguoiDung();
+        }
+
+        private void dtg_tt_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = dtg_tt.CurrentCell.RowIndex;
+
+            txt_hoten.Text = dtg_tt.Rows[row].Cells[1].Value.ToString();
+            txt_diachi.Text = dtg_tt.Rows[row].Cells[2].Value.ToString();
+            cmb_gt.SelectedItem = dtg_tt.Rows[row].Cells[3].Value.ToString();
+            date_ngaysinh.Text = dtg_tt.Rows[row].Cells[4].Value.ToString();
+            txt_email.Text = dtg_tt.Rows[row].Cells[5].Value.ToString();
+
+        }
+
+        private void btn_suatt_Click(object sender, EventArgs e)
+        {
+            if (btn_suatt.Text == "Sửa")
+            {
+                Set_Form(true);
+                txt_tendn.Focus();
+                txt_hoten.Focus();
+                btn_suatt.Text = "Lưu";
+            }
+            else
+            {
+
+            }
         }
 
 
