@@ -132,6 +132,7 @@ namespace GUI
                     btn_sua.Text = "Sửa";
                     btn_xoa.Text = "Xóa";
                     Load_Data();
+                    Set_Form(false);
                 }
                 else
                 {
@@ -144,7 +145,20 @@ namespace GUI
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-
+            DialogResult d = MessageBox.Show("Bạn có muốn xóa?", "Thông Báo", MessageBoxButtons.YesNo);
+            if (d == DialogResult.Yes)
+            {
+                int ID = int.Parse(dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                if (taikhoan.Delete_TaiKhoan(ID))
+                {
+                    MessageBox.Show("Xóa tài khoản thành công");
+                    Load_Data();
+                }
+                else
+                    MessageBox.Show("Xóa tài khoản thất bại");
+            }
+            else
+                return;
         }
 
 
