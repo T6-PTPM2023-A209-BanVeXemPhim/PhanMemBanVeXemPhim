@@ -15,6 +15,7 @@ namespace GUI
         public static Form_QLLichChieu frmQLLC = null;
         public static Form_QLTaiKhoan frmQLTaiKhoan = null;
         public static Form_CreateTK frmCreateTK = null;
+        public static Form_QLVe frmQLVe = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -25,8 +26,12 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             //frmDangNhap = new Form_DangNhap();
             //Application.Run(frmDangNhap);
-            frmMain = new Form_Main();
-            Application.Run(frmMain);
+            //frmDangNhap = new Form_DangNhap();
+            //Application.Run(frmDangNhap);
+            //frmQLLC = new Form_QLLichChieu();
+            //Application.Run(frmQLLC);
+            frmQLVe = new Form_QLVe();
+            Application.Run(frmQLVe);
         }
     }
 }

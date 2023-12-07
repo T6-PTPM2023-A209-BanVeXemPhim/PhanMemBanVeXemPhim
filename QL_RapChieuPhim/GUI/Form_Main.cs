@@ -68,5 +68,17 @@ namespace GUI
 
             Program.frmCreateTK.Show();
         }
+
+        private void lịchChiếuPhimToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+            if (Program.frmQLLC == null || Program.frmPhim.IsDisposed)
+                Program.frmQLLC = new Form_QLLichChieu();
+
+            OpenForm(Program.frmQLLC);
+
+        }
     }
 }
