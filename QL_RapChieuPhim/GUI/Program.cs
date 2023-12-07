@@ -24,8 +24,6 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             frmDangNhap = new Form_DangNhap();
             Application.Run(frmDangNhap);
-            ////frmMain = new Form_Main();
-            //Application.Run(new Form_Main());
         }
     }
 }
