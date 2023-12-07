@@ -36,9 +36,16 @@ namespace DAL_BLL
        // hàm xóa phim
        public void xoaPhim (Phim phim)
        {
-           Phim xphim = qlphim.Phims.Where(p => p.Id == phim.Id).FirstOrDefault();
-           qlphim.Phims.DeleteOnSubmit(xphim);
-           qlphim.SubmitChanges();
+           try
+           {
+               Phim xphim = qlphim.Phims.Where(p => p.Id == phim.Id).FirstOrDefault();
+               qlphim.Phims.DeleteOnSubmit(xphim);
+               qlphim.SubmitChanges();
+           }
+           catch (Exception ex)
+           {
+
+           }
        }
        
        // hàm sửa phim

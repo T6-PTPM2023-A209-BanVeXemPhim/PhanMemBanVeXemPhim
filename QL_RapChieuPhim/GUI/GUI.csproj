@@ -65,6 +65,12 @@
     <Compile Include="Form_DangNhap.Designer.cs">
       <DependentUpon>Form_DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_DatVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DatVe.Designer.cs">
+      <DependentUpon>Form_DatVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     <Compile Include="Form_QLTaiKhoan.Designer.cs">
       <DependentUpon>Form_QLTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_QLVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLVe.Designer.cs">
+      <DependentUpon>Form_QLVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Config.resx">
@@ -105,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DangNhap.resx">
       <DependentUpon>Form_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DatVe.resx">
+      <DependentUpon>Form_DatVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
@@ -120,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_QLTaiKhoan.resx">
       <DependentUpon>Form_QLTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLVe.resx">
+      <DependentUpon>Form_QLVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -81,12 +81,12 @@ namespace GUI
                 if (thongtin.Create_ThongTin(Hoten, DiaChi, Gt, NgaySinh, Email))
                 {
                     int IDThongTin = thongtin.Get_MaxID();
-                    if (taikhoan.Create_TaiKhoan(Email, MatKhau, IDQuyen, IDThongTin))
-                    {
-                        MessageBox.Show("Tạo tài khoản thành công");
-                    }
-                    else
-                        MessageBox.Show("Tạo tài khoản thất bại");
+                    //if (taikhoan.Create_TaiKhoan(Email, MatKhau, IDQuyen, IDThongTin))
+                    //{
+                    //    MessageBox.Show("Tạo tài khoản thành công");
+                    //}
+                    //else
+                    //    MessageBox.Show("Tạo tài khoản thất bại");
                 }
                 else
                 {

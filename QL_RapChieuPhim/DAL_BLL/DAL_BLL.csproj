@@ -41,7 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaChieuBLL.cs" />
+    <Compile Include="DatVeBLL.cs" />
+    <Compile Include="GheBLL.cs" />
     <Compile Include="LichChieuBLL.cs" />
+    <Compile Include="LoaiGheBLL.cs" />
     <Compile Include="PhimBLL.cs" />
     <Compile Include="PhongBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="SuatChieuBLL.cs" />
     <Compile Include="TaiKhoanBLL.cs" />
     <Compile Include="ThongTinBLL.cs" />
+    <Compile Include="VeBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
