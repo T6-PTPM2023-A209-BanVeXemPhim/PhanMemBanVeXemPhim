@@ -59,3 +59,4 @@ D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_QLLichChieu
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_QLPhim.resources
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\Controls.dll
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\Controls.pdb
+D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_CreateTK.resources

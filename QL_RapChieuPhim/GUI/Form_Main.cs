@@ -47,5 +47,26 @@ namespace GUI
 
             OpenForm(Program.frmQLTaiKhoan);
         }
+
+        private void phimToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmPhim == null || Program.frmPhim.IsDisposed)
+                Program.frmPhim = new Form_QLPhim();
+
+            OpenForm(Program.frmPhim);
+        }
+
+        private void thoatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmCreateTK == null || Program.frmCreateTK.IsDisposed)
+                Program.frmCreateTK = new Form_CreateTK();
+
+            Program.frmCreateTK.Show();
+        }
     }
 }

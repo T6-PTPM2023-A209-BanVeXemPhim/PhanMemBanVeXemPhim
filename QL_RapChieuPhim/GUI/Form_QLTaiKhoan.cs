@@ -162,16 +162,16 @@ namespace GUI
             }
             else
             {
-                DialogResult d = MessageBox.Show("Bạn có muốn xóa?", "Thông Báo", MessageBoxButtons.YesNo);
+                DialogResult d = MessageBox.Show("Bạn có muốn xóa tài khoản?", "Thông Báo", MessageBoxButtons.YesNo);
                 if (d == DialogResult.Yes)
                 {
                     if (dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[5].Value.ToString() != "5")
                     {
                         int ID = int.Parse(dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[0].Value.ToString());
                         int IDTT = int.Parse(dtg_tt.Rows[dtg_tt.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                        if (thongtin.Delete_ThongTin(IDTT))
+                        if (taikhoan.Delete_TaiKhoan(ID))
                         {
-                            taikhoan.Delete_TaiKhoan(ID);
+                            thongtin.Delete_ThongTin(IDTT);
 
                             MessageBox.Show("Xóa tài khoản thành công");
                             Load_Data();
