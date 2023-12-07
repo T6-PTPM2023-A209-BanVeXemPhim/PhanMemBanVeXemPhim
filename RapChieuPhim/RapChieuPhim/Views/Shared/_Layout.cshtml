@@ -278,10 +278,14 @@
                 },
                 success: function (response) {
                     console.log(response);
-                    if (response == "True") {
+                    if (response == "0") {
                         alert("Đăng nhập thành công!");
                         window.location.href = "/Home";
-                    } else {
+                    }
+                    else if (response == "1") {
+                        alert("Tài Khoản bị khóa!");
+                    }
+                    else {
                         alert("Tài khoản hoặc mật khẩu không đúng vui lòng nhập lại!");
                     }
                 }

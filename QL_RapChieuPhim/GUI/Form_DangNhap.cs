@@ -14,6 +14,7 @@ namespace GUI
     public partial class Form_DangNhap : Form
     {
         public QL_TaiKhoan qltk = new QL_TaiKhoan();
+        TaiKhoanBLL taikhoan = new TaiKhoanBLL();
 
         public Form_DangNhap()
         {
@@ -71,13 +72,23 @@ namespace GUI
             }
             else if (kq == 2)
             {
-                MessageBox.Show("Đăng Nhập Thành Công");
-                if (Program.frmMain == null || Program.frmMain.IsDisposed)
+                int q = taikhoan.GetID_TaiKhoan(txt_username.Text, txt_password.Text).Id;
+                if (q != 5)
                 {
-                    Program.frmMain = new Form_Main();
+                    MessageBox.Show("Đăng Nhập Thành Công");
+                    if (Program.frmMain == null || Program.frmMain.IsDisposed)
+                    {
+                        Program.frmMain = new Form_Main();
+                    }
+                    this.Visible = false;
+                    Program.frmMain.IDTK = q;
+                    Program.frmMain.Show();
                 }
-                this.Visible = false;
-                Program.frmMain.Show();
+                else
+                {
+                    MessageBox.Show("Tài Khoản không có quyền vào hệ thống quản trị");
+                    return;
+                }
             }
         }
 

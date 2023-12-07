@@ -71,6 +71,12 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Phong.Designer.cs">
+      <DependentUpon>Form_Phong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_QLLichChieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Phong.resx">
+      <DependentUpon>Form_Phong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_QLLichChieu.resx">
       <DependentUpon>Form_QLLichChieu.cs</DependentUpon>

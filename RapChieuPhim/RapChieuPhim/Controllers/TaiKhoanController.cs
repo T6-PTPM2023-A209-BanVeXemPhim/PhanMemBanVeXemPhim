@@ -13,25 +13,29 @@ namespace RapChieuPhim.Controllers
         private Data db = new Data();
         // GET: TaiKhoan
         [HttpPost]
-        public bool Login(string username, string password)
+        public int Login(string username, string password)
         {
             var dao = new TaiKhoanDao();
             Data Data = new Data();
             TaiKhoan taiKhoan = dao.checkTaikhoan(username, password);
             if (taiKhoan != null)
             {
-                var newCookie = new HttpCookie("myCookie", taiKhoan.Id.ToString());
-                var idtt = taiKhoan.id_ThongTin;
-                ThongTin m = Data.ThongTins.FirstOrDefault(x => x.ThongTin_id == idtt);
-                newCookie.Expires = DateTime.Now.AddDays(10);
-                Response.AppendCookie(newCookie);
-                Session.Add("USERSESSIO", taiKhoan);
-                Session["HoTen"] = m.TenNguoiDung;
-                Session["PQ"] = taiKhoan.PhanQuyen;
-                Session["nguoi"] = Data.ThongTins.FirstOrDefault(g => g.ThongTin_id == taiKhoan.id_ThongTin).TenNguoiDung;
-                return true;
+                if (taiKhoan.TinhTrang == true)
+                {
+                    var newCookie = new HttpCookie("myCookie", taiKhoan.Id.ToString());
+                    var idtt = taiKhoan.id_ThongTin;
+                    ThongTin m = Data.ThongTins.FirstOrDefault(x => x.ThongTin_id == idtt);
+                    newCookie.Expires = DateTime.Now.AddDays(10);
+                    Response.AppendCookie(newCookie);
+                    Session.Add("USERSESSIO", taiKhoan);
+                    Session["HoTen"] = m.TenNguoiDung;
+                    Session["PQ"] = taiKhoan.PhanQuyen;
+                    Session["nguoi"] = Data.ThongTins.FirstOrDefault(g => g.ThongTin_id == taiKhoan.id_ThongTin).TenNguoiDung;
+                    return 0;
+                }
+                return 1;
             }
-            return false;
+            return 2;
         }
         [HttpPost]
         public ActionResult Register(string username, string email, string password, string diachi, string gioitinh, string ngaysinh)

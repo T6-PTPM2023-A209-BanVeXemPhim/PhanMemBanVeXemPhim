@@ -12,6 +12,7 @@ namespace GUI
 {
     public partial class Form_Main : Form
     {
+        public int IDTK = 1;
         Form frm;
         public Form_Main()
         {
@@ -21,7 +22,50 @@ namespace GUI
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
+            if (IDTK != 1)
+            {
+                FindMenuPhanQuyen(menuStrip1.Items);
+            }
 
+        }
+
+        void FindMenuPhanQuyen(ToolStripItemCollection Item)
+        {
+            foreach (ToolStripItem menu in Item)
+            {
+                if (menu is ToolStripMenuItem && ((ToolStripMenuItem)(menu)).DropDownItems.Count > 0)
+                {
+                    FindMenuPhanQuyen(((ToolStripMenuItem)(menu)).DropDownItems);
+                    menu.Enabled = CheckAllMenuChillVisible(((ToolStripMenuItem)(menu)).DropDownItems);
+                    menu.Visible = menu.Enabled;
+                }
+                else if (string.Equals(IDTK.ToString(), menu.Tag) || string.Equals("0", menu.Tag))
+                {
+                    menu.Enabled = true;
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Enabled = false;
+                    menu.Visible = false;
+                }
+            }
+        }
+
+        bool CheckAllMenuChillVisible(ToolStripItemCollection mn)
+        {
+            foreach (ToolStripItem m in mn)
+            {
+                if (m is ToolStripMenuItem && m.Enabled)
+                {
+                    return true;
+                }
+                else if (m is ToolStripSeparator)
+                {
+                    continue;
+                }
+            }
+            return false;
         }
 
         void OpenForm(Form f)
@@ -67,6 +111,14 @@ namespace GUI
                 Program.frmCreateTK = new Form_CreateTK();
 
             Program.frmCreateTK.Show();
+        }
+
+        private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmPhong == null || Program.frmPhong.IsDisposed)
+                Program.frmPhong = new Form_Phong();
+
+            OpenForm(Program.frmPhong);
         }
     }
 }

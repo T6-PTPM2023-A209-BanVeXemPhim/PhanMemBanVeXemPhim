@@ -32,11 +32,11 @@ namespace RapChieuPhim.Areas.Admin.Controllers
                 }
                 else
                 {
-                    var newCookie = new HttpCookie("myCookieAdmin", taiKhoan.Id.ToString());
+                    var newCookie = new HttpCookie("myCookie", taiKhoan.Id.ToString());
                     newCookie.Expires = DateTime.Now.AddDays(10);
                     Response.AppendCookie(newCookie);
                     Session["HoTenAdmin"] = d.ThongTins.FirstOrDefault(g => g.ThongTin_id == taiKhoan.id_ThongTin).TenNguoiDung;
-                    Session["PQAdmin"] = taiKhoan.PhanQuyen;
+                    Session["PQ"] = taiKhoan.PhanQuyen;
                     return RedirectToAction("Index","Home");
                 }
             }
