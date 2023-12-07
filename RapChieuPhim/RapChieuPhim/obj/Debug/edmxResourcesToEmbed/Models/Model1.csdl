@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhimRapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Data" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(PhimRapModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(PhimRapModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="BinhLuans" EntityType="PhimRapModel.BinhLuan" />
+    <EntitySet Name="CaChieux" EntityType="PhimRapModel.CaChieu" />
+    <EntitySet Name="Cardedits" EntityType="PhimRapModel.Cardedit" />
+    <EntitySet Name="DanhMucs" EntityType="PhimRapModel.DanhMuc" />
+    <EntitySet Name="DatVes" EntityType="PhimRapModel.DatVe" />
+    <EntitySet Name="Ghes" EntityType="PhimRapModel.Ghe" />
+    <EntitySet Name="LichChieux" EntityType="PhimRapModel.LichChieu" />
+    <EntitySet Name="LoaiGhes" EntityType="PhimRapModel.LoaiGhe" />
+    <EntitySet Name="LoaiPhims" EntityType="PhimRapModel.LoaiPhim" />
+    <EntitySet Name="Phongs" EntityType="PhimRapModel.Phong" />
+    <EntitySet Name="Suatchieux" EntityType="PhimRapModel.Suatchieu" />
+    <EntitySet Name="TaiKhoans" EntityType="PhimRapModel.TaiKhoan" />
+    <EntitySet Name="ThongTins" EntityType="PhimRapModel.ThongTin" />
+    <EntitySet Name="Ves" EntityType="PhimRapModel.Ve" />
+    <EntitySet Name="ghe_phong" EntityType="PhimRapModel.ghe_phong" />
+    <AssociationSet Name="FK_TKBL" Association="PhimRapModel.FK_TKBL">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="BinhLuan" EntitySet="BinhLuans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LC_CC" Association="PhimRapModel.FK_LC_CC">
+      <End Role="CaChieu" EntitySet="CaChieux" />
+      <End Role="LichChieu" EntitySet="LichChieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DV_TK" Association="PhimRapModel.FK_DV_TK">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="DatVe" EntitySet="DatVes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ghe_LoaiGhe" Association="PhimRapModel.FK_Ghe_LoaiGhe">
+      <End Role="LoaiGhe" EntitySet="LoaiGhes" />
+      <End Role="Ghe" EntitySet="Ghes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ghe_Phong" Association="PhimRapModel.FK_Ghe_Phong">
+      <End Role="Phong" EntitySet="Phongs" />
+      <End Role="Ghe" EntitySet="Ghes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_V_Gk" Association="PhimRapModel.FK_V_Gk">
+      <End Role="Ghe" EntitySet="Ghes" />
+      <End Role="Ve" EntitySet="Ves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LC_V" Association="PhimRapModel.FK_LC_V">
+      <End Role="LichChieu" EntitySet="LichChieux" />
+      <End Role="Ve" EntitySet="Ves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_V" Association="PhimRapModel.FK_P_V">
+      <End Role="Phong" EntitySet="Phongs" />
+      <End Role="LichChieu" EntitySet="LichChieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SC_V" Association="PhimRapModel.FK_SC_V">
+      <End Role="Suatchieu" EntitySet="Suatchieux" />
+      <End Role="LichChieu" EntitySet="LichChieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tt" Association="PhimRapModel.FK_tt">
+      <End Role="ThongTin" EntitySet="ThongTins" />
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_V_TK" Association="PhimRapModel.FK_V_TK">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="Ve" EntitySet="Ves" />
+    </AssociationSet>
+    <EntitySet Name="Ve_LC_Phim" EntityType="PhimRapModel.Ve_LC_Phim" />
+    <EntitySet Name="BinhLuan_Phim" EntityType="PhimRapModel.BinhLuan_Phim" />
+    <EntitySet Name="tkdts" EntityType="PhimRapModel.tkdt" />
+    <EntitySet Name="tkdttps" EntityType="PhimRapModel.tkdttp" />
+    <EntitySet Name="Ve_LC_Phim_TK" EntityType="PhimRapModel.Ve_LC_Phim_TK" />
+    <EntitySet Name="Phims" EntityType="PhimRapModel.Phim" />
+    <EntitySet Name="sysdiagrams" EntityType="PhimRapModel.sysdiagram" />
+    <AssociationSet Name="FK_PBL" Association="PhimRapModel.FK_PBL">
+      <End Role="Phim" EntitySet="Phims" />
+      <End Role="BinhLuan" EntitySet="BinhLuans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SC_CC" Association="PhimRapModel.FK_SC_CC">
+      <End Role="CaChieu" EntitySet="CaChieux" />
+      <End Role="Suatchieu" EntitySet="Suatchieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DM_P" Association="PhimRapModel.FK_DM_P">
+      <End Role="Phim" EntitySet="Phims" />
+      <End Role="DanhMuc" EntitySet="DanhMucs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phim_LC" Association="PhimRapModel.FK_Phim_LC">
+      <End Role="Phim" EntitySet="Phims" />
+      <End Role="LichChieu" EntitySet="LichChieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SC_LC" Association="PhimRapModel.FK_SC_LC">
+      <End Role="LichChieu" EntitySet="LichChieux" />
+      <End Role="Suatchieu" EntitySet="Suatchieux" />
+    </AssociationSet>
+    <AssociationSet Name="FK_P_LP" Association="PhimRapModel.FK_P_LP">
+      <End Role="LoaiPhim" EntitySet="LoaiPhims" />
+      <End Role="Phim" EntitySet="Phims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_V_P" Association="PhimRapModel.FK_V_P">
+      <End Role="Phim" EntitySet="Phims" />
+      <End Role="Ve" EntitySet="Ves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_V_SC" Association="PhimRapModel.FK_V_SC">
+      <End Role="Suatchieu" EntitySet="Suatchieux" />
+      <End Role="Ve" EntitySet="Ves" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="BinhLuan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPhim" Type="Int32" />
+    <Property Name="IdTK" Type="Int32" />
+    <Property Name="NoiDung" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDang" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+    <Property Name="DanhGia" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TaiKhoan" Relationship="PhimRapModel.FK_TKBL" FromRole="BinhLuan" ToRole="TaiKhoan" />
+    <NavigationProperty Name="Phim" Relationship="PhimRapModel.FK_PBL" FromRole="BinhLuan" ToRole="Phim" />
+  </EntityType>
+  <EntityType Name="CaChieu">
+    <Key>
+      <PropertyRef Name="IdCC" />
+    </Key>
+    <Property Name="IdCC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenCC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LichChieux" Relationship="PhimRapModel.FK_LC_CC" FromRole="CaChieu" ToRole="LichChieu" />
+    <Property Name="GioBD" Type="Time" Nullable="false" Precision="0" />
+    <Property Name="GioKT" Type="Time" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Suatchieux" Relationship="PhimRapModel.FK_SC_CC" FromRole="CaChieu" ToRole="Suatchieu" />
+  </EntityType>
+  <EntityType Name="Cardedit">
+    <Key>
+      <PropertyRef Name="IdCard" />
+      <PropertyRef Name="IdTK" />
+    </Key>
+    <Property Name="IdCard" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTK" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DanhMuc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDanhMuc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_Phim" Type="Int32" />
+    <NavigationProperty Name="Phim" Relationship="PhimRapModel.FK_DM_P" FromRole="DanhMuc" ToRole="Phim" />
+  </EntityType>
+  <EntityType Name="DatVe">
+    <Key>
+      <PropertyRef Name="IDDatVe" />
+    </Key>
+    <Property Name="IDDatVe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDTK" Type="Int32" Nullable="false" />
+    <Property Name="IDve" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDat" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TongTien" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="TaiKhoan" Relationship="PhimRapModel.FK_DV_TK" FromRole="DatVe" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="Ghe">
+    <Key>
+      <PropertyRef Name="ghe_id" />
+    </Key>
+    <Property Name="ghe_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Loai_id" Type="Int32" />
+    <Property Name="TringTrang" Type="Boolean" Nullable="false" />
+    <Property Name="Id_phong" Type="Int32" />
+    <Property Name="TenGhe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HangGhe" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LoaiGhe" Relationship="PhimRapModel.FK_Ghe_LoaiGhe" FromRole="Ghe" ToRole="LoaiGhe" />
+    <NavigationProperty Name="Phong" Relationship="PhimRapModel.FK_Ghe_Phong" FromRole="Ghe" ToRole="Phong" />
+    <NavigationProperty Name="Ves" Relationship="PhimRapModel.FK_V_Gk" FromRole="Ghe" ToRole="Ve" />
+  </EntityType>
+  <EntityType Name="LichChieu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayChieu" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Thu" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Phuthulc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IdPhim" Type="Int32" />
+    <Property Name="IdCC" Type="Int32" />
+    <Property Name="IdSC" Type="Int32" />
+    <Property Name="GioBD" Type="Time" Precision="7" />
+    <Property Name="GioKT" Type="Time" Precision="7" />
+    <Property Name="IdPhong" Type="Int32" />
+    <NavigationProperty Name="CaChieu" Relationship="PhimRapModel.FK_LC_CC" FromRole="LichChieu" ToRole="CaChieu" />
+    <NavigationProperty Name="Ves" Relationship="PhimRapModel.FK_LC_V" FromRole="LichChieu" ToRole="Ve" />
+    <NavigationProperty Name="Phong" Relationship="PhimRapModel.FK_P_V" FromRole="LichChieu" ToRole="Phong" />
+    <NavigationProperty Name="Suatchieu" Relationship="PhimRapModel.FK_SC_V" FromRole="LichChieu" ToRole="Suatchieu" />
+    <NavigationProperty Name="Phim" Relationship="PhimRapModel.FK_Phim_LC" FromRole="LichChieu" ToRole="Phim" />
+    <NavigationProperty Name="Suatchieux" Relationship="PhimRapModel.FK_SC_LC" FromRole="LichChieu" ToRole="Suatchieu" />
+  </EntityType>
+  <EntityType Name="LoaiGhe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiGhe" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GiaGhe" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Ghes" Relationship="PhimRapModel.FK_Ghe_LoaiGhe" FromRole="LoaiGhe" ToRole="Ghe" />
+  </EntityType>
+  <EntityType Name="LoaiPhim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoai" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Phims" Relationship="PhimRapModel.FK_P_LP" FromRole="LoaiPhim" ToRole="Phim" />
+  </EntityType>
+  <EntityType Name="Phong">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenPhong" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="SoluongHang" Type="Int32" Nullable="false" />
+    <Property Name="Soluongghemoihang" Type="Int32" Nullable="false" />
+    <Property Name="TrinhTrang" Type="Boolean" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ghes" Relationship="PhimRapModel.FK_Ghe_Phong" FromRole="Phong" ToRole="Ghe" />
+    <NavigationProperty Name="LichChieux" Relationship="PhimRapModel.FK_P_V" FromRole="Phong" ToRole="LichChieu" />
+  </EntityType>
+  <EntityType Name="Suatchieu">
+    <Key>
+      <PropertyRef Name="IdSC" />
+    </Key>
+    <Property Name="IdSC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSuat" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="phuthusc" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LichChieux" Relationship="PhimRapModel.FK_SC_V" FromRole="Suatchieu" ToRole="LichChieu" />
+    <Property Name="IdCC" Type="Int32" />
+    <Property Name="Idphong" Type="Int32" Nullable="false" />
+    <Property Name="idLC" Type="Int32" />
+    <NavigationProperty Name="CaChieu" Relationship="PhimRapModel.FK_SC_CC" FromRole="Suatchieu" ToRole="CaChieu" />
+    <NavigationProperty Name="LichChieu" Relationship="PhimRapModel.FK_SC_LC" FromRole="Suatchieu" ToRole="LichChieu" />
+    <NavigationProperty Name="Ves" Relationship="PhimRapModel.FK_V_SC" FromRole="Suatchieu" ToRole="Ve" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDangKy" Type="DateTime" Precision="0" />
+    <Property Name="TinhTrang" Type="Boolean" />
+    <Property Name="PhanQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_ThongTin" Type="Int32" />
+    <NavigationProperty Name="BinhLuans" Relationship="PhimRapModel.FK_TKBL" FromRole="TaiKhoan" ToRole="BinhLuan" />
+    <NavigationProperty Name="DatVes" Relationship="PhimRapModel.FK_DV_TK" FromRole="TaiKhoan" ToRole="DatVe" />
+    <NavigationProperty Name="ThongTin" Relationship="PhimRapModel.FK_tt" FromRole="TaiKhoan" ToRole="ThongTin" />
+    <NavigationProperty Name="Ves" Relationship="PhimRapModel.FK_V_TK" FromRole="TaiKhoan" ToRole="Ve" />
+  </EntityType>
+  <EntityType Name="ThongTin">
+    <Key>
+      <PropertyRef Name="ThongTin_id" />
+    </Key>
+    <Property Name="ThongTin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="GioiTinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TaiKhoans" Relationship="PhimRapModel.FK_tt" FromRole="ThongTin" ToRole="TaiKhoan" />
+  </EntityType>
+  <EntityType Name="Ve">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTaiKhoan" Type="Int32" />
+    <Property Name="IdPhim" Type="Int32" />
+    <Property Name="IdGhe" Type="Int32" />
+    <Property Name="NgayDat" Type="DateTime" Precision="7" />
+    <Property Name="GiaVe" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Soluong" Type="Int32" />
+    <Property Name="TinhTrang" Type="Int32" />
+    <Property Name="IdLC" Type="Int32" />
+    <NavigationProperty Name="Ghe" Relationship="PhimRapModel.FK_V_Gk" FromRole="Ve" ToRole="Ghe" />
+    <NavigationProperty Name="LichChieu" Relationship="PhimRapModel.FK_LC_V" FromRole="Ve" ToRole="LichChieu" />
+    <NavigationProperty Name="TaiKhoan" Relationship="PhimRapModel.FK_V_TK" FromRole="Ve" ToRole="TaiKhoan" />
+    <Property Name="IdSC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Phim" Relationship="PhimRapModel.FK_V_P" FromRole="Ve" ToRole="Phim" />
+    <NavigationProperty Name="Suatchieu" Relationship="PhimRapModel.FK_V_SC" FromRole="Ve" ToRole="Suatchieu" />
+  </EntityType>
+  <EntityType Name="ghe_phong">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TenPhong" />
+      <PropertyRef Name="SoLuong" />
+      <PropertyRef Name="SoluongHang" />
+      <PropertyRef Name="Soluongghemoihang" />
+      <PropertyRef Name="TrinhTrang" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenPhong" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="SoluongHang" Type="Int32" Nullable="false" />
+    <Property Name="Soluongghemoihang" Type="Int32" Nullable="false" />
+    <Property Name="TrinhTrang" Type="Boolean" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_TKBL">
+    <End Type="PhimRapModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
+    <End Type="PhimRapModel.BinhLuan" Role="BinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BinhLuan">
+        <PropertyRef Name="IdTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LC_CC">
+    <End Type="PhimRapModel.CaChieu" Role="CaChieu" Multiplicity="0..1" />
+    <End Type="PhimRapModel.LichChieu" Role="LichChieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CaChieu">
+        <PropertyRef Name="IdCC" />
+      </Principal>
+      <Dependent Role="LichChieu">
+        <PropertyRef Name="IdCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DV_TK">
+    <End Type="PhimRapModel.TaiKhoan" Role="TaiKhoan" Multiplicity="1" />
+    <End Type="PhimRapModel.DatVe" Role="DatVe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DatVe">
+        <PropertyRef Name="IDTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ghe_LoaiGhe">
+    <End Type="PhimRapModel.LoaiGhe" Role="LoaiGhe" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Ghe" Role="Ghe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiGhe">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ghe">
+        <PropertyRef Name="Loai_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ghe_Phong">
+    <End Type="PhimRapModel.Phong" Role="Phong" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Ghe" Role="Ghe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phong">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ghe">
+        <PropertyRef Name="Id_phong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_V_Gk">
+    <End Type="PhimRapModel.Ghe" Role="Ghe" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Ve" Role="Ve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ghe">
+        <PropertyRef Name="ghe_id" />
+      </Principal>
+      <Dependent Role="Ve">
+        <PropertyRef Name="IdGhe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LC_V">
+    <End Type="PhimRapModel.LichChieu" Role="LichChieu" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Ve" Role="Ve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LichChieu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ve">
+        <PropertyRef Name="IdLC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_V">
+    <End Type="PhimRapModel.Phong" Role="Phong" Multiplicity="0..1" />
+    <End Type="PhimRapModel.LichChieu" Role="LichChieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phong">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LichChieu">
+        <PropertyRef Name="IdPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SC_V">
+    <End Type="PhimRapModel.Suatchieu" Role="Suatchieu" Multiplicity="0..1" />
+    <End Type="PhimRapModel.LichChieu" Role="LichChieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suatchieu">
+        <PropertyRef Name="IdSC" />
+      </Principal>
+      <Dependent Role="LichChieu">
+        <PropertyRef Name="IdSC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tt">
+    <End Type="PhimRapModel.ThongTin" Role="ThongTin" Multiplicity="0..1" />
+    <End Type="PhimRapModel.TaiKhoan" Role="TaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThongTin">
+        <PropertyRef Name="ThongTin_id" />
+      </Principal>
+      <Dependent Role="TaiKhoan">
+        <PropertyRef Name="id_ThongTin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_V_TK">
+    <End Type="PhimRapModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Ve" Role="Ve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ve">
+        <PropertyRef Name="IdTaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Ve_LC_Phim">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="TenPhong" />
+      <PropertyRef Name="TenPhim" />
+      <PropertyRef Name="TenLoai" />
+      <PropertyRef Name="NgayChieu" />
+      <PropertyRef Name="TenLoaiGhe" />
+      <PropertyRef Name="Thu" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="TenPhong" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenPhim" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenGhe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TenLoai" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GiaVe" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="phuthusc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Phuthulc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NgayChieu" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GioBD" Type="Time" Precision="7" />
+    <Property Name="GioKT" Type="Time" Precision="7" />
+    <Property Name="TenLoaiGhe" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenSuat" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Thu" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BinhLuan_Phim">
+    <Key>
+      <PropertyRef Name="NoiDung" />
+      <PropertyRef Name="NgayDang" />
+      <PropertyRef Name="BLId" />
+      <PropertyRef Name="IdPhim" />
+    </Key>
+    <Property Name="TenNguoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDang" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BLId" Type="Int32" Nullable="false" />
+    <Property Name="IdPhim" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tkdt">
+    <Key>
+      <PropertyRef Name="TenPhong" />
+    </Key>
+    <Property Name="TenPhong" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tong" Type="Decimal" Precision="38" Scale="4" />
+  </EntityType>
+  <EntityType Name="tkdttp">
+    <Key>
+      <PropertyRef Name="TenPhim" />
+    </Key>
+    <Property Name="TenPhim" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tong" Type="Decimal" Precision="38" Scale="4" />
+  </EntityType>
+  <EntityType Name="Ve_LC_Phim_TK">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Id_tk" />
+      <PropertyRef Name="TenPhong" />
+      <PropertyRef Name="TenPhim" />
+      <PropertyRef Name="TenLoai" />
+      <PropertyRef Name="NgayChieu" />
+      <PropertyRef Name="TenLoaiGhe" />
+      <PropertyRef Name="Thu" />
+      <PropertyRef Name="IDTK" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id_tk" Type="Int32" Nullable="false" />
+    <Property Name="TenPhong" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenPhim" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenGhe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TenLoai" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GiaVe" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="phuthusc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Phuthulc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NgayChieu" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GioBD" Type="Time" Precision="7" />
+    <Property Name="GioKT" Type="Time" Precision="7" />
+    <Property Name="TenLoaiGhe" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TenSuat" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Thu" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IDTK" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Phim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenPhim" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnhPhim" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiLuong" Type="Int32" Nullable="false" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+    <Property Name="IdLoaiPhim" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DienVien" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DaoDien" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NgayCongChieu" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NamPhatHanh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChatLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BinhLuans" Relationship="PhimRapModel.FK_PBL" FromRole="Phim" ToRole="BinhLuan" />
+    <NavigationProperty Name="DanhMucs" Relationship="PhimRapModel.FK_DM_P" FromRole="Phim" ToRole="DanhMuc" />
+    <NavigationProperty Name="LichChieux" Relationship="PhimRapModel.FK_Phim_LC" FromRole="Phim" ToRole="LichChieu" />
+    <NavigationProperty Name="LoaiPhim" Relationship="PhimRapModel.FK_P_LP" FromRole="Phim" ToRole="LoaiPhim" />
+    <NavigationProperty Name="Ves" Relationship="PhimRapModel.FK_V_P" FromRole="Phim" ToRole="Ve" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_PBL">
+    <End Type="PhimRapModel.Phim" Role="Phim" Multiplicity="0..1" />
+    <End Type="PhimRapModel.BinhLuan" Role="BinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BinhLuan">
+        <PropertyRef Name="IdPhim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SC_CC">
+    <End Type="PhimRapModel.CaChieu" Role="CaChieu" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Suatchieu" Role="Suatchieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CaChieu">
+        <PropertyRef Name="IdCC" />
+      </Principal>
+      <Dependent Role="Suatchieu">
+        <PropertyRef Name="IdCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DM_P">
+    <End Type="PhimRapModel.Phim" Role="Phim" Multiplicity="0..1" />
+    <End Type="PhimRapModel.DanhMuc" Role="DanhMuc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DanhMuc">
+        <PropertyRef Name="id_Phim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phim_LC">
+    <End Type="PhimRapModel.Phim" Role="Phim" Multiplicity="0..1" />
+    <End Type="PhimRapModel.LichChieu" Role="LichChieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LichChieu">
+        <PropertyRef Name="IdPhim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SC_LC">
+    <End Type="PhimRapModel.LichChieu" Role="LichChieu" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Suatchieu" Role="Suatchieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LichChieu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Suatchieu">
+        <PropertyRef Name="idLC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_P_LP">
+    <End Type="PhimRapModel.LoaiPhim" Role="LoaiPhim" Multiplicity="1" />
+    <End Type="PhimRapModel.Phim" Role="Phim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiPhim">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Phim">
+        <PropertyRef Name="IdLoaiPhim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_V_P">
+    <End Type="PhimRapModel.Phim" Role="Phim" Multiplicity="0..1" />
+    <End Type="PhimRapModel.Ve" Role="Ve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ve">
+        <PropertyRef Name="IdPhim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_V_SC">
+    <End Type="PhimRapModel.Suatchieu" Role="Suatchieu" Multiplicity="1" />
+    <End Type="PhimRapModel.Ve" Role="Ve" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suatchieu">
+        <PropertyRef Name="IdSC" />
+      </Principal>
+      <Dependent Role="Ve">
+        <PropertyRef Name="IdSC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
