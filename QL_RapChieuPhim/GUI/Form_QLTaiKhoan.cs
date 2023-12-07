@@ -88,24 +88,6 @@ namespace GUI
             cmb_gt.Enabled = b;
         }
 
-        private void dtg_TK_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int row = dtg_TK.CurrentCell.RowIndex;
-
-            txt_tendn.Text = dtg_TK.Rows[row].Cells[1].Value.ToString();
-            txt_matkhau.Text = dtg_TK.Rows[row].Cells[2].Value.ToString();
-            date_ngaydk.Text = dtg_TK.Rows[row].Cells[3].Value.ToString();
-            Set_ButtunTrangThai(dtg_TK.Rows[row].Cells[4].Value.ToString());
-            cmb_quyen.SelectedValue = dtg_TK.Rows[row].Cells[5].Value.ToString();
-
-            Load_NguoiDung(int.Parse(dtg_TK.Rows[row].Cells[0].Value.ToString()));
-        }
-
-        private void cmb_quyen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show("s");
-        }
-
         private void btn_trangthai_Click(object sender, EventArgs e)
         {
             int row = dtg_TK.CurrentCell.RowIndex;
@@ -113,9 +95,9 @@ namespace GUI
             int Id = int.Parse(dtg_TK.Rows[row].Cells[0].Value.ToString());
             bool TrangThai = bool.Parse(dtg_TK.Rows[row].Cells[4].Value.ToString());
 
-            if(taikhoan.Update_TaiKhoan_TrangThai(Id, !TrangThai))
+            if (taikhoan.Update_TaiKhoan_TrangThai(Id, !TrangThai))
             {
-                if(TrangThai)
+                if (TrangThai)
                     MessageBox.Show("Khóa tài khoản thành công");
                 else
                     MessageBox.Show("Mở khóa tài khoản thành công");
@@ -166,7 +148,7 @@ namespace GUI
                     MessageBox.Show("Cập nhật thất bại");
                     return;
                 }
-                
+
             }
         }
 
@@ -183,14 +165,22 @@ namespace GUI
                 DialogResult d = MessageBox.Show("Bạn có muốn xóa?", "Thông Báo", MessageBoxButtons.YesNo);
                 if (d == DialogResult.Yes)
                 {
-                    int ID = int.Parse(dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                    if (taikhoan.Delete_TaiKhoan(ID))
+                    if (dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[5].Value.ToString() != "5")
                     {
-                        MessageBox.Show("Xóa tài khoản thành công");
-                        Load_Data();
+                        int ID = int.Parse(dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                        int IDTT = int.Parse(dtg_tt.Rows[dtg_tt.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                        if (thongtin.Delete_ThongTin(IDTT))
+                        {
+                            taikhoan.Delete_TaiKhoan(ID);
+
+                            MessageBox.Show("Xóa tài khoản thành công");
+                            Load_Data();
+                        }
+                        else
+                            MessageBox.Show("Xóa tài khoản thất bại");
                     }
                     else
-                        MessageBox.Show("Xóa tài khoản thất bại");
+                        MessageBox.Show("Không thể xóa tài khoản khách hàng");
                 }
                 else
                     return;
@@ -202,7 +192,52 @@ namespace GUI
             Load_NguoiDung();
         }
 
-        private void dtg_tt_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_suatt_Click(object sender, EventArgs e)
+        {
+            if (btn_suatt.Text == "Sửa")
+            {
+                Set_Form1(true);
+                txt_tendn.Focus();
+                txt_hoten.Focus();
+                btn_suatt.Text = "Lưu";
+            }
+            else
+            {
+                int row = dtg_tt.CurrentCell.RowIndex;
+
+                int ID = int.Parse(dtg_tt.Rows[row].Cells[0].Value.ToString());
+                string Ten = txt_hoten.Text;
+                string Diachi = txt_diachi.Text;
+                string Gt = cmb_gt.SelectedItem.ToString();
+                DateTime Ngay = date_ngaydk.Value;
+                string Email = txt_email.Text;
+
+                if (thongtin.Update_ThongTin(ID, Ten, Diachi, Gt, Ngay, Email))
+                {
+                    MessageBox.Show("Cập nhật thông tin người dùng thành công");
+                    Load_NguoiDung(int.Parse(dtg_TK.Rows[dtg_TK.CurrentCell.RowIndex].Cells[6].Value.ToString()));
+                    Set_Form1(false);
+                    btn_suatt.Text = "Sửa";
+                }
+                else
+                    MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        private void dtg_TK_SelectionChanged(object sender, EventArgs e)
+        {
+            int row = dtg_TK.CurrentCell.RowIndex;
+
+            txt_tendn.Text = dtg_TK.Rows[row].Cells[1].Value.ToString();
+            txt_matkhau.Text = dtg_TK.Rows[row].Cells[2].Value.ToString();
+            date_ngaydk.Text = dtg_TK.Rows[row].Cells[3].Value.ToString();
+            Set_ButtunTrangThai(dtg_TK.Rows[row].Cells[4].Value.ToString());
+            cmb_quyen.SelectedValue = dtg_TK.Rows[row].Cells[5].Value.ToString();
+
+            Load_NguoiDung(int.Parse(dtg_TK.Rows[row].Cells[6].Value.ToString()));
+        }
+
+        private void dtg_tt_SelectionChanged(object sender, EventArgs e)
         {
             int row = dtg_tt.CurrentCell.RowIndex;
 
@@ -211,22 +246,11 @@ namespace GUI
             cmb_gt.SelectedItem = dtg_tt.Rows[row].Cells[3].Value.ToString();
             date_ngaysinh.Text = dtg_tt.Rows[row].Cells[4].Value.ToString();
             txt_email.Text = dtg_tt.Rows[row].Cells[5].Value.ToString();
-
         }
 
-        private void btn_suatt_Click(object sender, EventArgs e)
+        private void btn_thoat_Click(object sender, EventArgs e)
         {
-            if (btn_suatt.Text == "Sửa")
-            {
-                Set_Form(true);
-                txt_tendn.Focus();
-                txt_hoten.Focus();
-                btn_suatt.Text = "Lưu";
-            }
-            else
-            {
-
-            }
+            this.Dispose();
         }
 
 

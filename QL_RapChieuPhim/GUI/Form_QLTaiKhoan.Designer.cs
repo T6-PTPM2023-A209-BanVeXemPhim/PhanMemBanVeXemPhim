@@ -55,8 +55,8 @@
             this.txt_diachi = new System.Windows.Forms.TextBox();
             this.cmb_gt = new System.Windows.Forms.ComboBox();
             this.date_ngaysinh = new System.Windows.Forms.DateTimePicker();
-            this.txt_email = new Controls.txtEmail();
             this.btn_suatt = new System.Windows.Forms.Button();
+            this.txt_email = new Controls.txtEmail();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_TK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_tt)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,7 @@
             this.btn_thoat.TabIndex = 30;
             this.btn_thoat.Text = "Thoát";
             this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // btn_xoa
             // 
@@ -223,7 +224,7 @@
             this.dtg_TK.RowTemplate.Height = 28;
             this.dtg_TK.Size = new System.Drawing.Size(841, 290);
             this.dtg_TK.TabIndex = 17;
-            this.dtg_TK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_TK_CellClick);
+            this.dtg_TK.SelectionChanged += new System.EventHandler(this.dtg_TK_SelectionChanged);
             // 
             // label1
             // 
@@ -247,7 +248,7 @@
             this.dtg_tt.RowTemplate.Height = 28;
             this.dtg_tt.Size = new System.Drawing.Size(998, 290);
             this.dtg_tt.TabIndex = 32;
-            this.dtg_tt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_tt_CellClick);
+            this.dtg_tt.SelectionChanged += new System.EventHandler(this.dtg_tt_SelectionChanged);
             // 
             // label7
             // 
@@ -334,14 +335,6 @@
             this.date_ngaysinh.Size = new System.Drawing.Size(360, 35);
             this.date_ngaysinh.TabIndex = 41;
             // 
-            // txt_email
-            // 
-            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(1055, 690);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(360, 35);
-            this.txt_email.TabIndex = 43;
-            // 
             // btn_suatt
             // 
             this.btn_suatt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -353,6 +346,14 @@
             this.btn_suatt.Text = "Sửa";
             this.btn_suatt.UseVisualStyleBackColor = false;
             this.btn_suatt.Click += new System.EventHandler(this.btn_suatt_Click);
+            // 
+            // txt_email
+            // 
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.Location = new System.Drawing.Point(1055, 690);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(360, 35);
+            this.txt_email.TabIndex = 43;
             // 
             // Form_QLTaiKhoan
             // 
