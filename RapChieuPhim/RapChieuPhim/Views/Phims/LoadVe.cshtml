@@ -17,9 +17,9 @@
                     <div class="row">
                         <div class="col-md-6 form-it">
                             <br />
-                            @{ var tong = 0;
+                            @*@{ var tong = 0;
 
-                            }
+                            }*@
                             <label>Mã QR</label>
                             <br />
                             @foreach (var k in listanh)
@@ -42,7 +42,7 @@
                             <br />
                             <label>Giá vé: @convert.ConvertToThousand64_From_Float(Model.GiaVe.Value.ToString("F99").TrimEnd('0').Trim('.')) VNĐ</label>
                             <br />
-                            <label>Ngày: @Model.Thu</label>
+                            <label>Thứ: @Model.Thu</label>
                             <br />
                             <label>
                                 Ngày chiếu: @Model.NgayChieu.ToString("dd-MM-yyyy")

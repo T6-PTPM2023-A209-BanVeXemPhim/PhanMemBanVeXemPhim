@@ -17,7 +17,6 @@ namespace RapChieuPhim.Controllers
         // GET: Ve
         Data db = new Data();
         public ActionResult Index(int id)
-
         {
             var dao = new PhimDao();
             Session["id"] = id;
@@ -47,12 +46,16 @@ namespace RapChieuPhim.Controllers
         }
         public ActionResult Ghe(int? Id, string IdGhe = "")
         {
+
             var dao = new PhimDao();
             var id = Convert.ToInt16(Session["id"]);
             PhimViewModel phimmodel = dao.getPhimFindbyId(id);
             Session.Add("PHIM", phimmodel);
             ViewData["phimmodel"] = phimmodel;
-            var IdPhong = db.LichChieux.FirstOrDefault(g => g.Id == Id).IdPhong;
+            var IdPhong = (db.LichChieux.FirstOrDefault(g => g.Id == Id)).IdPhong;
+            //var phong = db.LichChieux.Where(p => p.Id == Id).FirstOrDefault();
+            //var IdPhong = phong.IdPhong;
+
             ViewBag.SoGheTheoHang = db.Phongs.FirstOrDefault(g => g.Id == IdPhong).Soluongghemoihang;
             var ghe = db.Ghes.Where(g => g.Id_phong == IdPhong).OrderByDescending(g => g.Loai_id).ToList();
             ViewBag.Id = Id;
@@ -60,6 +63,7 @@ namespace RapChieuPhim.Controllers
             ViewBag.IdGhe = IdGhe;
             ViewData["ghedat123"] = db.Ves.Where(g => g.IdLC == Id).Select(g => g.IdGhe).ToList();
             return View();
+
         }
         [HttpPost]
         public ActionResult Ghe(int Id = 0, string IdGhe = "")
@@ -102,7 +106,7 @@ namespace RapChieuPhim.Controllers
             if (tt.Count > 0)
             {
                 ViewBag.HoTen = db.ThongTins.FirstOrDefault(g => g.ThongTin_id == nguoi).TenNguoiDung;
-                ViewBag.Email= db.ThongTins.FirstOrDefault(g => g.ThongTin_id == nguoi).Email;
+                ViewBag.Email = db.ThongTins.FirstOrDefault(g => g.ThongTin_id == nguoi).Email;
             }
             PhimViewModel phimmodel = dao.getPhimFindbyId(Id);
             Session.Add("PHIM", phimmodel);

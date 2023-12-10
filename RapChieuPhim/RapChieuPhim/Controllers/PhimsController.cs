@@ -32,13 +32,26 @@ namespace RapChieuPhim.Controllers
             ViewBag.total = books.Count();
             return View(books.ToPagedList(pageNumber, pageSize));
         }
-        public ActionResult PhimSapChieu(int? page, int? id)
+        public ActionResult PhimSapChieu(int? page, int? Id)
         {
+            //if (page == null)
+            //    page = 1;
+            //var books = db.Phims.Where(g => g.TinhTrang == false).OrderBy(g => g.Id);
+           
+            //return View(id);
             if (page == null)
                 page = 1;
             var books = db.Phims.Where(g => g.TinhTrang == false).OrderBy(g => g.Id);
-           
-            return View(id);
+            int pageSize = 6;
+            int pageNumber = (page ?? 1);
+
+            if (Id != null)
+            {
+                ViewBag.Id = Id;
+                books = books.Where(g => g.IdLoaiPhim.Contains(Id.ToString())).OrderBy(g => g.Id);
+            }
+            ViewBag.total = books.Count();
+            return View(books.ToPagedList(pageNumber, pageSize));
         }
         public ActionResult DetatilPhims(int? id)
         {

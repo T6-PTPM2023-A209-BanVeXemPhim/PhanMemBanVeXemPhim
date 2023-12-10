@@ -93,7 +93,7 @@
                                         {
                                             idGheStr = item.ghe_id.ToString();
                                         }
-                                        var link = $"/Ve/Ghe/?IdGhe={idGheStr}&Id={ViewBag.Id}";
+                                        var link = @"/Ve/Ghe/?Id="+ViewBag.Id+"&IdGhe="+idGheStr;
                                         if (item.Loai_id == 2)
                                         {
                                             <a href="@link">
