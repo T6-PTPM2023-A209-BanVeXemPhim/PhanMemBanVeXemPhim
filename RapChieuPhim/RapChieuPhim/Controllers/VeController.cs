@@ -32,14 +32,14 @@ namespace RapChieuPhim.Controllers
         }
         public ActionResult Phong(string Ngay)
         {
-            DateTime dt = DateTime.ParseExact(Ngay, "dd-MM-yyyy", CultureInfo.InvariantCulture);
+            DateTime dt = DateTime.ParseExact(Ngay, "dd-MM-yyyy hh:mm:ss", CultureInfo.InvariantCulture);
             var rc = db.LichChieux.Where(g => g.NgayChieu == dt).Select(g => g.IdPhong).ToList();
             var list = db.Phongs.Where(g => rc.Contains(g.Id)).Select(g => new { g.Id, g.TenPhong }).ToList();
             return Json(list, JsonRequestBehavior.AllowGet);
         }
         public ActionResult GioXem(string Ngay = "", int IdPhong = 0)
         {
-            DateTime dt = DateTime.ParseExact(Ngay, "dd-MM-yyyy", CultureInfo.InvariantCulture);
+            DateTime dt = DateTime.ParseExact(Ngay, "dd-MM-yyyy hh:mm:ss", CultureInfo.InvariantCulture);
             var rc = db.LichChieux.Where(g => g.NgayChieu == dt && g.IdPhong == IdPhong).Select(g => new { GIOBD = g.GioBD.ToString().Replace(".0000000", ""), GIOKT = g.GioKT.ToString().Replace(".0000000", ""), g.Id }).ToList();
             Session["ngay"] = dt;
             return Json(rc, JsonRequestBehavior.AllowGet);

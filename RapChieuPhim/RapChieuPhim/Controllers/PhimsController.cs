@@ -20,7 +20,7 @@ namespace RapChieuPhim.Controllers
         {
             if (page == null)
                 page = 1;
-            var books = db.Phims.Where(g => g.TinhTrang == true).OrderBy(g => g.Id);
+            var books = db.Phims.Where(g => g.TinhTrang == true).OrderByDescending(g => g.Id);
             int pageSize = 6;
             int pageNumber = (page ?? 1);
 
@@ -41,7 +41,7 @@ namespace RapChieuPhim.Controllers
             //return View(id);
             if (page == null)
                 page = 1;
-            var books = db.Phims.Where(g => g.TinhTrang == false).OrderBy(g => g.Id);
+            var books = db.Phims.Where(g => g.TinhTrang == false).OrderByDescending(g => g.Id);
             int pageSize = 6;
             int pageNumber = (page ?? 1);
 

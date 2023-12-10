@@ -12,9 +12,9 @@ namespace RapChieuPhim.Controllers
         Data dbl = new Data();
         public ActionResult Index()
         {
-            List<Phim> list = dbl.Phims.AsQueryable().Where(g => g.TinhTrang == true).ToList();
+            List<Phim> list = dbl.Phims.AsQueryable().Where(g => g.TinhTrang == true).OrderByDescending(g => g.Id).ToList();
             ViewData["TopView"] = list;
-            List<Phim> listHD = dbl.Phims.AsQueryable().Where(g => g.TinhTrang == false).ToList();
+            List<Phim> listHD = dbl.Phims.AsQueryable().Where(g => g.TinhTrang == false).OrderByDescending(g => g.Id).ToList();
             ViewData["HanhDong"] = listHD;
             ViewData["loai"] = dbl.LoaiPhims.ToList();
             Data db = new Data();

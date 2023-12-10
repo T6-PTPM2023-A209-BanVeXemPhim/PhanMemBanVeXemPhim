@@ -19,17 +19,26 @@ namespace GUI
         public Form_Phong()
         {
             InitializeComponent();
-            //CenterToScreen();
+            CenterToScreen();
         }
 
         private void Form_Phong_Load(object sender, EventArgs e)
         {
             load_dtg();
+            Set_Enl_txt(false);
         }
 
         void load_dtg()
         {
             dtg_phong.DataSource = phong.getPhong();
+        }
+
+        void Set_Enl_txt(bool b)
+        {
+            txt_tenp.Enabled = b;
+            txt_slg.Enabled = b;
+            txt_slh.Enabled = b;
+            txt_mota.Enabled = b;
         }
 
         private void dtg_phong_SelectionChanged(object sender, EventArgs e)
@@ -65,6 +74,7 @@ namespace GUI
                 txt_slh.Text = "";
                 txt_slg.Text = "";
                 txt_mota.Text = "";
+                Set_Enl_txt(true);
                 txt_tenp.Focus();
                 btn_them.Text = "Lưu";
                 s = true;
@@ -74,7 +84,12 @@ namespace GUI
                 if (s)
                 {
                     if (phong.Create_Phong(txt_tenp.Text, int.Parse(txt_slh.Text), int.Parse(txt_slg.Text), txt_mota.Text))
+                    {
                         MessageBox.Show("Thanh Cong");
+                        Set_Enl_txt(false);
+                        btn_them.Text = "Thêm";
+                        load_dtg();
+                    }
                     else
                         MessageBox.Show("That Bai");
                 }
@@ -82,30 +97,57 @@ namespace GUI
                 {
                     if (phong.Update_Phong(int.Parse(dtg_phong.Rows[dtg_phong.CurrentCell.RowIndex].Cells[0].Value.ToString()), txt_tenp.Text,
                         int.Parse(txt_slh.Text), int.Parse(txt_slg.Text), txt_mota.Text))
+                    {
                         MessageBox.Show("Thanh Cong");
+                        Set_Enl_txt(false);
+                        btn_them.Text = "Thêm";
+                        load_dtg();
+                    }
                     else
                         MessageBox.Show("That Bai");
-
                 }
             }
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Bạn có muốn xóa tài khoản?", "Thông Báo", MessageBoxButtons.YesNo);
+            DialogResult d = MessageBox.Show("Bạn có muốn xóa phòng?", "Thông Báo", MessageBoxButtons.YesNo);
             if (d == DialogResult.Yes)
             {
-                if(phong.Delete_Phong(int.Parse(dtg_phong.Rows[dtg_phong.CurrentCell.RowIndex].Cells[0].Value.ToString())))
-                    MessageBox.Show("Thanh Cong");
+                if (phong.Delete_Phong(int.Parse(dtg_phong.Rows[dtg_phong.CurrentCell.RowIndex].Cells[0].Value.ToString())))
+                {
+                    MessageBox.Show("Thành Công");
+                    load_dtg();
+                }
                 else
-                    MessageBox.Show("That Bai");
+                    MessageBox.Show("Thất Bại");
             }
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
+            btn_them.Text = "Lưu";
+            Set_Enl_txt(true);
             txt_tenp.Focus();
             s = false;
+        }
+
+        private void btn_tinhtrang_Click(object sender, EventArgs e)
+        {
+            bool tt;
+            int ID = int.Parse(dtg_phong.Rows[dtg_phong.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            if (btn_tinhtrang.Text == "Hoạt Động")
+            {
+                tt = false;
+            }
+            else
+            {
+                tt = true;
+            }
+
+            phong.Update_PhongTT(ID, tt);
+            MessageBox.Show("Đã thay đổi trạng thái phòng");
+            load_dtg();
         }
     }
 }

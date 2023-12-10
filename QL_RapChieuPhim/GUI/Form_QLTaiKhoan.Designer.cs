@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_tt = new System.Windows.Forms.Button();
-            this.btn_thoat = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_quyen = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_trangthai = new System.Windows.Forms.Button();
             this.date_ngaydk = new System.Windows.Forms.DateTimePicker();
             this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.txt_tendn = new System.Windows.Forms.TextBox();
@@ -55,61 +50,15 @@
             this.txt_diachi = new System.Windows.Forms.TextBox();
             this.cmb_gt = new System.Windows.Forms.ComboBox();
             this.date_ngaysinh = new System.Windows.Forms.DateTimePicker();
-            this.btn_suatt = new System.Windows.Forms.Button();
             this.txt_email = new Controls.txtEmail();
+            this.btn_sua = new Controls.btn_control();
+            this.btn_xoa = new Controls.btn_control();
+            this.btn_trangthai = new Controls.btn_control();
+            this.btn_tt = new Controls.btn_control();
+            this.btn_suatt = new Controls.btn_control();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_TK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_tt)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_tt
-            // 
-            this.btn_tt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_tt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tt.Location = new System.Drawing.Point(1487, 396);
-            this.btn_tt.Name = "btn_tt";
-            this.btn_tt.Size = new System.Drawing.Size(267, 43);
-            this.btn_tt.TabIndex = 31;
-            this.btn_tt.Text = "Thông Tin Người Dùng";
-            this.btn_tt.UseVisualStyleBackColor = false;
-            this.btn_tt.Click += new System.EventHandler(this.btn_tt_Click);
-            // 
-            // btn_thoat
-            // 
-            this.btn_thoat.BackColor = System.Drawing.Color.Red;
-            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(1196, 753);
-            this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(558, 43);
-            this.btn_thoat.TabIndex = 30;
-            this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.UseVisualStyleBackColor = false;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.Location = new System.Drawing.Point(640, 473);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(222, 43);
-            this.btn_xoa.TabIndex = 29;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = false;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_sua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(640, 400);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(222, 43);
-            this.btn_sua.TabIndex = 28;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = false;
-            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // label6
             // 
@@ -140,16 +89,6 @@
             this.label5.Size = new System.Drawing.Size(83, 29);
             this.label5.TabIndex = 25;
             this.label5.Text = "Quyền";
-            // 
-            // btn_trangthai
-            // 
-            this.btn_trangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_trangthai.Location = new System.Drawing.Point(228, 686);
-            this.btn_trangthai.Name = "btn_trangthai";
-            this.btn_trangthai.Size = new System.Drawing.Size(324, 43);
-            this.btn_trangthai.TabIndex = 24;
-            this.btn_trangthai.UseVisualStyleBackColor = true;
-            this.btn_trangthai.Click += new System.EventHandler(this.btn_trangthai_Click);
             // 
             // date_ngaydk
             // 
@@ -337,18 +276,6 @@
             this.date_ngaysinh.Size = new System.Drawing.Size(360, 35);
             this.date_ngaysinh.TabIndex = 41;
             // 
-            // btn_suatt
-            // 
-            this.btn_suatt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_suatt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suatt.Location = new System.Drawing.Point(1487, 466);
-            this.btn_suatt.Name = "btn_suatt";
-            this.btn_suatt.Size = new System.Drawing.Size(222, 43);
-            this.btn_suatt.TabIndex = 44;
-            this.btn_suatt.Text = "Sửa";
-            this.btn_suatt.UseVisualStyleBackColor = false;
-            this.btn_suatt.Click += new System.EventHandler(this.btn_suatt_Click);
-            // 
             // txt_email
             // 
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,6 +284,104 @@
             this.txt_email.Size = new System.Drawing.Size(360, 35);
             this.txt_email.TabIndex = 43;
             // 
+            // btn_sua
+            // 
+            this.btn_sua.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_sua.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.btn_sua.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_sua.BorderRadius = 20;
+            this.btn_sua.BorderSize = 1;
+            this.btn_sua.FlatAppearance.BorderSize = 0;
+            this.btn_sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.White;
+            this.btn_sua.Location = new System.Drawing.Point(640, 396);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(222, 50);
+            this.btn_sua.TabIndex = 45;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.TextColor = System.Drawing.Color.White;
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.BackColor = System.Drawing.Color.Red;
+            this.btn_xoa.BackgroundColor = System.Drawing.Color.Red;
+            this.btn_xoa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_xoa.BorderRadius = 20;
+            this.btn_xoa.BorderSize = 1;
+            this.btn_xoa.FlatAppearance.BorderSize = 0;
+            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.ForeColor = System.Drawing.Color.White;
+            this.btn_xoa.Location = new System.Drawing.Point(640, 469);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(222, 50);
+            this.btn_xoa.TabIndex = 46;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.TextColor = System.Drawing.Color.White;
+            this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_trangthai
+            // 
+            this.btn_trangthai.BackColor = System.Drawing.Color.Red;
+            this.btn_trangthai.BackgroundColor = System.Drawing.Color.Red;
+            this.btn_trangthai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_trangthai.BorderRadius = 20;
+            this.btn_trangthai.BorderSize = 1;
+            this.btn_trangthai.FlatAppearance.BorderSize = 0;
+            this.btn_trangthai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_trangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_trangthai.ForeColor = System.Drawing.Color.White;
+            this.btn_trangthai.Location = new System.Drawing.Point(228, 682);
+            this.btn_trangthai.Name = "btn_trangthai";
+            this.btn_trangthai.Size = new System.Drawing.Size(324, 50);
+            this.btn_trangthai.TabIndex = 47;
+            this.btn_trangthai.TextColor = System.Drawing.Color.White;
+            this.btn_trangthai.UseVisualStyleBackColor = false;
+            this.btn_trangthai.Click += new System.EventHandler(this.btn_trangthai_Click);
+            // 
+            // btn_tt
+            // 
+            this.btn_tt.BackColor = System.Drawing.Color.DarkOrange;
+            this.btn_tt.BackgroundColor = System.Drawing.Color.DarkOrange;
+            this.btn_tt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_tt.BorderRadius = 20;
+            this.btn_tt.BorderSize = 1;
+            this.btn_tt.FlatAppearance.BorderSize = 0;
+            this.btn_tt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tt.ForeColor = System.Drawing.Color.White;
+            this.btn_tt.Location = new System.Drawing.Point(1477, 396);
+            this.btn_tt.Name = "btn_tt";
+            this.btn_tt.Size = new System.Drawing.Size(389, 50);
+            this.btn_tt.TabIndex = 48;
+            this.btn_tt.Text = "Tất Cả Người Dùng";
+            this.btn_tt.TextColor = System.Drawing.Color.White;
+            this.btn_tt.UseVisualStyleBackColor = false;
+            this.btn_tt.Click += new System.EventHandler(this.btn_tt_Click);
+            // 
+            // btn_suatt
+            // 
+            this.btn_suatt.BackColor = System.Drawing.Color.Green;
+            this.btn_suatt.BackgroundColor = System.Drawing.Color.Green;
+            this.btn_suatt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_suatt.BorderRadius = 20;
+            this.btn_suatt.BorderSize = 1;
+            this.btn_suatt.FlatAppearance.BorderSize = 0;
+            this.btn_suatt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_suatt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suatt.ForeColor = System.Drawing.Color.White;
+            this.btn_suatt.Location = new System.Drawing.Point(1477, 469);
+            this.btn_suatt.Name = "btn_suatt";
+            this.btn_suatt.Size = new System.Drawing.Size(222, 50);
+            this.btn_suatt.TabIndex = 49;
+            this.btn_suatt.Text = "Sửa";
+            this.btn_suatt.TextColor = System.Drawing.Color.White;
+            this.btn_suatt.UseVisualStyleBackColor = false;
+            // 
             // Form_QLTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -364,6 +389,10 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1878, 808);
             this.Controls.Add(this.btn_suatt);
+            this.Controls.Add(this.btn_tt);
+            this.Controls.Add(this.btn_trangthai);
+            this.Controls.Add(this.btn_xoa);
+            this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.date_ngaysinh);
             this.Controls.Add(this.cmb_gt);
@@ -375,14 +404,9 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dtg_tt);
-            this.Controls.Add(this.btn_tt);
-            this.Controls.Add(this.btn_thoat);
-            this.Controls.Add(this.btn_xoa);
-            this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmb_quyen);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btn_trangthai);
             this.Controls.Add(this.date_ngaydk);
             this.Controls.Add(this.txt_matkhau);
             this.Controls.Add(this.txt_tendn);
@@ -404,14 +428,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_tt;
-        private System.Windows.Forms.Button btn_thoat;
-        private System.Windows.Forms.Button btn_xoa;
-        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmb_quyen;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_trangthai;
         private System.Windows.Forms.DateTimePicker date_ngaydk;
         private System.Windows.Forms.TextBox txt_matkhau;
         private System.Windows.Forms.TextBox txt_tendn;
@@ -431,6 +450,10 @@
         private System.Windows.Forms.ComboBox cmb_gt;
         private System.Windows.Forms.DateTimePicker date_ngaysinh;
         private Controls.txtEmail txt_email;
-        private System.Windows.Forms.Button btn_suatt;
+        private Controls.btn_control btn_sua;
+        private Controls.btn_control btn_xoa;
+        private Controls.btn_control btn_trangthai;
+        private Controls.btn_control btn_tt;
+        private Controls.btn_control btn_suatt;
     }
 }

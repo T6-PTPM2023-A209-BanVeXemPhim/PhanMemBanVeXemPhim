@@ -43,7 +43,7 @@ namespace GUI
             _fileName = dgvPhim.Rows[r].Cells[2].Value.ToString();
             try
             {
-                pictureBox1.Image = new Bitmap("D:\\Images_QLVP\\" + _fileName);
+                pictureBox1.Image = new Bitmap(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\" + _fileName);
             }
             catch (Exception ex)
             {
@@ -64,15 +64,15 @@ namespace GUI
         private void savepicture(string _fileName)
         {
             // copy và lưu ảnh vào thư mục image
-            File.Copy(open.FileName, Path.Combine("D:\\Images_QLVP\\" + _fileName), true);
+            File.Copy(open.FileName, Path.Combine(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\" + _fileName), true);
         }
 
         // hàm xóa ảnh khỏi thư mực
         private void deletePicture(string _fileName)
         {
-            if (File.Exists(Path.Combine("D:\\Images_QLVP\\", _fileName)))
+            if (File.Exists(Path.Combine(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\", _fileName)))
             {
-                File.Delete(Path.Combine("D:\\Images_QLVP\\", _fileName));
+                File.Delete(Path.Combine(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\", _fileName));
                 MessageBox.Show("xóa ảnh thành công");
 
             }
@@ -121,7 +121,7 @@ namespace GUI
             DialogResult a = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo);
             if (a == DialogResult.Yes)
             {
-                this.Close();
+                this.Dispose();
             }
             else return;
         }

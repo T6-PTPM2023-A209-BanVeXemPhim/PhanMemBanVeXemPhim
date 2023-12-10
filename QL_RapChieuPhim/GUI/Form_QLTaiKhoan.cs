@@ -248,11 +248,5 @@ namespace GUI
             txt_email.Text = dtg_tt.Rows[row].Cells[5].Value.ToString();
         }
 
-        private void btn_thoat_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-
     }
 }
