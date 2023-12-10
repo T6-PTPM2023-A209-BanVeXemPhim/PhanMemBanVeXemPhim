@@ -88,6 +88,7 @@
             // btn_xoa
             // 
             this.btn_xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xoa.Location = new System.Drawing.Point(640, 473);
             this.btn_xoa.Name = "btn_xoa";
@@ -100,6 +101,7 @@
             // btn_sua
             // 
             this.btn_sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_sua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.Location = new System.Drawing.Point(640, 400);
             this.btn_sua.Name = "btn_sua";
