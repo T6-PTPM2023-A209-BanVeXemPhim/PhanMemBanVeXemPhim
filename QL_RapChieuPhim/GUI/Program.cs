@@ -16,6 +16,9 @@ namespace GUI
         public static Form_QLTaiKhoan frmQLTaiKhoan = null;
         public static Form_CreateTK frmCreateTK = null;
         public static Form_Phong frmPhong = null;
+        public static Form_QLLichChieu frmLichChieu = null;
+        public static Form_QLVe frmVe = null;
+        public static Form_DoanhThu frmDoanhThu = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

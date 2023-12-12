@@ -257,5 +257,24 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Quyens">
+      <EntityTypeMapping TypeName="QUANLYRAPCHIEUPHIMModel.Quyen">
+        <MappingFragment StoreEntitySet="Quyen">
+          <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataSTs">
+      <EntityTypeMapping TypeName="QUANLYRAPCHIEUPHIMModel.DataST">
+        <MappingFragment StoreEntitySet="DataST">
+          <ScalarProperty Name="output" ColumnName="output" />
+          <ScalarProperty Name="sothich3" ColumnName="sothich3" />
+          <ScalarProperty Name="sothich2" ColumnName="sothich2" />
+          <ScalarProperty Name="sothich1" ColumnName="sothich1" />
+          <ScalarProperty Name="STT" ColumnName="STT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -103,6 +103,7 @@ namespace GUI
         private void thoatsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            Program.frmDangNhap.Visible = true;
         }
 
         private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,6 +120,36 @@ namespace GUI
                 Program.frmPhong = new Form_Phong();
 
             OpenForm(Program.frmPhong);
+        }
+
+        private void lịchChiếuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmLichChieu == null || Program.frmLichChieu.IsDisposed)
+                Program.frmLichChieu = new Form_QLLichChieu();
+
+            OpenForm(Program.frmLichChieu);
+        }
+
+        private void véToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmVe == null || Program.frmVe.IsDisposed)
+                Program.frmVe = new Form_QLVe();
+
+            OpenForm(Program.frmVe);
+        }
+
+        private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //this.Dispose();
+            //Program.frmDangNhap.Visible = true;
+        }
+
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmDoanhThu == null || Program.frmDoanhThu.IsDisposed)
+                Program.frmDoanhThu = new Form_DoanhThu();
+
+            OpenForm(Program.frmDoanhThu);
         }
     }
 }

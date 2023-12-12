@@ -18,6 +18,8 @@ namespace GUI
         int id_Phim = 0;
         OpenFileDialog open;
         PhimBLL phimbll = new PhimBLL();
+        string file = @"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\";
+
         public Form_QLPhim()
         {
             InitializeComponent();
@@ -43,7 +45,7 @@ namespace GUI
             _fileName = dgvPhim.Rows[r].Cells[2].Value.ToString();
             try
             {
-                pictureBox1.Image = new Bitmap(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\" + _fileName);
+                pictureBox1.Image = new Bitmap(file + _fileName);
             }
             catch (Exception ex)
             {
@@ -64,15 +66,15 @@ namespace GUI
         private void savepicture(string _fileName)
         {
             // copy và lưu ảnh vào thư mục image
-            File.Copy(open.FileName, Path.Combine(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\" + _fileName), true);
+            File.Copy(open.FileName, Path.Combine(file + _fileName), true);
         }
 
         // hàm xóa ảnh khỏi thư mực
         private void deletePicture(string _fileName)
         {
-            if (File.Exists(Path.Combine(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\", _fileName)))
+            if (File.Exists(Path.Combine(file, _fileName)))
             {
-                File.Delete(Path.Combine(@"D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\Content\Upload\Image\", _fileName));
+                File.Delete(Path.Combine(file, _fileName));
                 MessageBox.Show("xóa ảnh thành công");
 
             }

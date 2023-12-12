@@ -3,6 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var loai = ViewData["loai"] as List<LoaiPhim>;
+    var goiy = ViewData["GoiY"] as List<Phim>;
 }
 
 
@@ -35,9 +36,12 @@
             <div class="row ipad-width">
                 <div class="col-md-8">
                     <div class="tabs">
-                        <form method="get">
+                        <div class="title-hd">
+                            <h2>Gợi Ý Phim</h2>
+                        </div>
+                        <form action="" method="post">
                             <div class="col-md-3 form-it">
-                                <label>Thể Loại 1</label>
+                                <label>Sở thích 1</label>
                                 <select id="Loai1" name="showloai1">
                                     <option>Chọn Loại Phim</option>
                                     @foreach (var item in loai)
@@ -48,7 +52,7 @@
                             </div>
 
                             <div class="col-md-3 form-it">
-                                <label>Thể Loại 2</label>
+                                <label>Sở thích 2</label>
                                 <select id="loai2" name="showloai2">
                                     <option>Chọn Loại Phim</option>
                                     @foreach (var item in loai)
@@ -59,7 +63,7 @@
                             </div>
 
                             <div class="col-md-3 form-it">
-                                <label>Thể Loại 3</label>
+                                <label>Sở thích 3</label>
                                 <select id="loai3" name="showloai3">
                                     <option>Chọn Loại Phim</option>
                                     @foreach (var item in loai)
@@ -71,9 +75,55 @@
                             <div class="col-md-3 form-it">
                                 <button class="btn" style="width: 100px; height: 40px; padding: 10px; background: #dd003f; color: white; border-radius: 50px; margin-top:17px" type="submit">Gợi Ý</button>
                             </div>
-                            
+
                         </form>
                     </div>
+
+                    @if (goiy.Count > 0)
+                    {
+                        <div class="title-hd">
+                            <h2>Gợi Ý Cho Bạn</h2>
+                        </div>
+
+                        <div class="tabs">
+                            <div class="tab-content">
+                                <div id="tab1" class="tab active">
+                                    <div class="row">
+                                        <div class="slick-multiItem">
+                                            @foreach (var phimshd in goiy)
+                                            {
+                                                <div class="slide-it">
+                                                    <div class="movie-item">
+                                                        <div class="mv-img">
+                                                            <img src="/Content/Upload/Image/@phimshd.AnhPhim" alt="" width="185" height="250">
+                                                        </div>
+                                                        <div class="hvr-inner">
+                                                            <a href="/Phims/DetatilPhims?id=@phimshd.Id &&Name=@phimshd.TenPhim+@loai.FirstOrDefault(g=>phimshd.IdLoaiPhim.Contains(g.Id.ToString())).TenLoai+@phimshd.NgayCongChieu">Chi Tiết<i class="ion-android-arrow-dropright"></i> </a>
+                                                        </div>
+                                                        <div class="title-in">
+                                                            <h6><a href="/Phims/DetatilPhims?id=@phimshd.Id &&Name=@phimshd.TenPhim+@loai.FirstOrDefault(g=>phimshd.IdLoaiPhim.Contains(g.Id.ToString())).TenLoai+@phimshd.NgayCongChieu">@phimshd.TenPhim</a></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if(ViewData["gt"].ToString() == "0")
+                    {
+                        <div class="title-hd">
+                            <h2>Gợi Ý Cho Bạn</h2>
+                            
+                        </div>
+                        <h6>Không có thông tin gợi ý!! vui lòng chọn lại sở thích cửa bạn</h6>
+                    }
+                    <br />
+
+                       
+
                     <div class="title-hd">
                         <h2>PHIM ĐANG CHIẾU RẠP</h2>
                         <a  class="btn btn-default" href="/Phims">Tất cả<i class="ion-ios-arrow-right"></i></a>
@@ -109,6 +159,7 @@
                         </div>
 
                     </div>
+           
                     <div class="title-hd">
                         <h2>PHIM SẮP RA MẮT</h2>
                         <a class="btn btn-default" href="/Phims/phimsapchieu">Tất cả<i class="ion-ios-arrow-right"></i></a>

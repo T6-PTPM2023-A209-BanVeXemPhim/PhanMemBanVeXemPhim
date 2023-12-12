@@ -109,3 +109,15 @@ D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\obj\Release\RapChieuPhim
 D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\obj\Release\RapChieuPhim.csproj.GenerateResource.Cache
 D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\obj\Release\RapChieuPhim.dll
 D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\obj\Release\RapChieuPhim.pdb
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\obj\Release\RapChieuPhim.csprojResolveAssemblyReference.cache
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.dll.config
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.dll
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.MachineLearning.dll
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.Math.Core.dll
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.Math.dll
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.Statistics.dll
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.xml
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.MachineLearning.xml
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.Math.xml
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.Math.Core.xml
+D:\GitHub\PhanMemBanVeXemPhim\RapChieuPhim\RapChieuPhim\bin\Accord.Statistics.xml

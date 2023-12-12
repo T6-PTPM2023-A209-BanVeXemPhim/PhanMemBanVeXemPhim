@@ -19,6 +19,16 @@
     <Property Name="IdCC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenCC" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="DataST">
+    <Key>
+      <PropertyRef Name="STT" />
+    </Key>
+    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sothich1" Type="nvarchar" MaxLength="50" />
+    <Property Name="sothich2" Type="nvarchar" MaxLength="50" />
+    <Property Name="sothich3" Type="nvarchar" MaxLength="50" />
+    <Property Name="output" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="DatVe">
     <Key>
       <PropertyRef Name="IDDatVe" />
@@ -102,6 +112,13 @@
     <Property Name="Soluongghemoihang" Type="int" Nullable="false" />
     <Property Name="TrinhTrang" Type="bit" Nullable="false" />
     <Property Name="MoTa" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Quyen">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenQuyen" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Suatchieu">
     <Key>
@@ -369,6 +386,18 @@ warning 6002: The table/view 'QUANLYRAPCHIEUPHIM.dbo.Ve_LC_Phim_TK' does not hav
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_QUYEN">
+    <End Role="Quyen" Type="Self.Quyen" Multiplicity="0..1" />
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quyen">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TaiKhoan">
+        <PropertyRef Name="PhanQuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SC_LC">
     <End Role="Suatchieu" Type="Self.Suatchieu" Multiplicity="0..1" />
     <End Role="LichChieu" Type="Self.LichChieu" Multiplicity="*" />
@@ -444,6 +473,7 @@ warning 6002: The table/view 'QUANLYRAPCHIEUPHIM.dbo.Ve_LC_Phim_TK' does not hav
   <EntityContainer Name="QUANLYRAPCHIEUPHIMModelStoreContainer">
     <EntitySet Name="BinhLuan" EntityType="Self.BinhLuan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CaChieu" EntityType="Self.CaChieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataST" EntityType="Self.DataST" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DatVe" EntityType="Self.DatVe" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ghe" EntityType="Self.Ghe" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LichChieu" EntityType="Self.LichChieu" Schema="dbo" store:Type="Tables" />
@@ -451,6 +481,7 @@ warning 6002: The table/view 'QUANLYRAPCHIEUPHIM.dbo.Ve_LC_Phim_TK' does not hav
     <EntitySet Name="LoaiPhim" EntityType="Self.LoaiPhim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Phim" EntityType="Self.Phim" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Quyen" EntityType="Self.Quyen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Suatchieu" EntityType="Self.Suatchieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ThongTin" EntityType="Self.ThongTin" Schema="dbo" store:Type="Tables" />
@@ -566,6 +597,10 @@ warning 6002: The table/view 'QUANLYRAPCHIEUPHIM.dbo.Ve_LC_Phim_TK' does not hav
     <AssociationSet Name="FK_Phim_LC" Association="Self.FK_Phim_LC">
       <End Role="Phim" EntitySet="Phim" />
       <End Role="LichChieu" EntitySet="LichChieu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUYEN" Association="Self.FK_QUYEN">
+      <End Role="Quyen" EntitySet="Quyen" />
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
     </AssociationSet>
     <AssociationSet Name="FK_SC_LC" Association="Self.FK_SC_LC">
       <End Role="Suatchieu" EntitySet="Suatchieu" />

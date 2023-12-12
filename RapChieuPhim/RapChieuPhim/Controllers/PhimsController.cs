@@ -32,7 +32,7 @@ namespace RapChieuPhim.Controllers
             ViewBag.total = books.Count();
             return View(books.ToPagedList(pageNumber, pageSize));
         }
-        public ActionResult PhimSapChieu(int? page, int? Id)
+        public ActionResult PhimSapChieu(int? page)
         {
             //if (page == null)
             //    page = 1;
@@ -45,11 +45,11 @@ namespace RapChieuPhim.Controllers
             int pageSize = 6;
             int pageNumber = (page ?? 1);
 
-            if (Id != null)
-            {
-                ViewBag.Id = Id;
-                books = books.Where(g => g.IdLoaiPhim.Contains(Id.ToString())).OrderBy(g => g.Id);
-            }
+            //if (Id != null)
+            //{
+            //    ViewBag.Id = Id;
+            //    books = books.Where(g => g.IdLoaiPhim.Contains(Id.ToString())).OrderBy(g => g.Id);
+            //}
             ViewBag.total = books.Count();
             return View(books.ToPagedList(pageNumber, pageSize));
         }

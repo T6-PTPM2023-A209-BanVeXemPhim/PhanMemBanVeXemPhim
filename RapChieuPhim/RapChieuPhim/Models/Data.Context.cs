@@ -45,5 +45,7 @@ namespace RapChieuPhim.Models
         public virtual DbSet<tkdttp1> tkdttp1 { get; set; }
         public virtual DbSet<Ve_LC_Phim> Ve_LC_Phim { get; set; }
         public virtual DbSet<Ve_LC_Phim_TK> Ve_LC_Phim_TK { get; set; }
+        public virtual DbSet<Quyen> Quyens { get; set; }
+        public virtual DbSet<DataST> DataSTs { get; set; }
     }
 }

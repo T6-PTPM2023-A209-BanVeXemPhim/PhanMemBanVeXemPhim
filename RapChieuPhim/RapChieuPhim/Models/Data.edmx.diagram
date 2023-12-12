@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="efa754201d1e4344b1345869476738d9" Name="Diagram1" ZoomLevel="72">
+      <Diagram DiagramId="efa754201d1e4344b1345869476738d9" Name="Diagram1" ZoomLevel="77">
         <EntityTypeShape EntityType="QUANLYRAPCHIEUPHIMModel.BinhLuan" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYRAPCHIEUPHIMModel.CaChieu" Width="1.5" PointX="3.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYRAPCHIEUPHIMModel.DatVe" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
@@ -39,6 +39,9 @@
         <AssociationConnector Association="QUANLYRAPCHIEUPHIMModel.FK_V_P" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYRAPCHIEUPHIMModel.FK_tt" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYRAPCHIEUPHIMModel.FK_V_TK" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QUANLYRAPCHIEUPHIMModel.Quyen" Width="1.5" PointX="12.375" PointY="9.875" />
+        <AssociationConnector Association="QUANLYRAPCHIEUPHIMModel.FK_QUYEN" />
+        <EntityTypeShape EntityType="QUANLYRAPCHIEUPHIMModel.DataST" Width="1.5" PointX="12.375" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

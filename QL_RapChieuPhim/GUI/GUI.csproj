@@ -71,6 +71,12 @@
     <Compile Include="Form_DatVe.Designer.cs">
       <DependentUpon>Form_DatVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_DoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DoanhThu.Designer.cs">
+      <DependentUpon>Form_DoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DatVe.resx">
       <DependentUpon>Form_DatVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DoanhThu.resx">
+      <DependentUpon>Form_DoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
