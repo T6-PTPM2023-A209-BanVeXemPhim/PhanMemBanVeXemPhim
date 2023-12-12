@@ -58,7 +58,7 @@ namespace RapChieuPhim.Controllers
             var dao = new PhimDao();
             Session["idPhim"] = id;
             var phims = dao.getPhimFindbyId(id);
-            ViewData["Binhluan"] = db.BinhLuan_Phim.Where(g => g.IdPhim == id).AsQueryable().ToList();
+            ViewData["Binhluan"] = db.BinhLuan_Phim.Where(g => g.IdPhim == id).AsQueryable().OrderByDescending(g => g.NgayDang).ToList();
             Session.Add("PHIM", phims);
             ViewData["phimview"] = phims;
             return View();
@@ -66,8 +66,8 @@ namespace RapChieuPhim.Controllers
         public ActionResult LoadVe()
         {
             var tk = Convert.ToInt32(Request.Cookies["myCookie"].Value);
-            var l = db.Ve_LC_Phim_TK.Where(g => g.Id_tk == tk).OrderBy(g => g.NgayDat).FirstOrDefault();
-            var list = db.DatVes.Where(g => g.IDTK == tk).OrderBy(g => g.IDDatVe).FirstOrDefault();
+            var l = db.Ve_LC_Phim_TK.Where(g => g.Id_tk == tk).OrderByDescending(g => g.Id).FirstOrDefault();
+            var list = db.DatVes.Where(g => g.IDTK == tk).OrderByDescending(g => g.IDDatVe).FirstOrDefault();
             List<QRCodeModel> m = new List<QRCodeModel>();
 
             QRCodeModel k = new QRCodeModel();

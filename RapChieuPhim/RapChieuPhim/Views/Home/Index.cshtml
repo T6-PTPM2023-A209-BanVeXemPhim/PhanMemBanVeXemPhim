@@ -34,6 +34,46 @@
         <div class="container">
             <div class="row ipad-width">
                 <div class="col-md-8">
+                    <div class="tabs">
+                        <form method="get">
+                            <div class="col-md-3 form-it">
+                                <label>Thể Loại 1</label>
+                                <select id="Loai1" name="showloai1">
+                                    <option>Chọn Loại Phim</option>
+                                    @foreach (var item in loai)
+                                    {
+                                        <option value="@item.TenLoai">@item.TenLoai</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="col-md-3 form-it">
+                                <label>Thể Loại 2</label>
+                                <select id="loai2" name="showloai2">
+                                    <option>Chọn Loại Phim</option>
+                                    @foreach (var item in loai)
+                                    {
+                                        <option value="@item.TenLoai">@item.TenLoai</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <div class="col-md-3 form-it">
+                                <label>Thể Loại 3</label>
+                                <select id="loai3" name="showloai3">
+                                    <option>Chọn Loại Phim</option>
+                                    @foreach (var item in loai)
+                                    {
+                                        <option value="@item.TenLoai">@item.TenLoai</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-3 form-it">
+                                <button class="btn" style="width: 100px; height: 40px; padding: 10px; background: #dd003f; color: white; border-radius: 50px; margin-top:17px" type="submit">Gợi Ý</button>
+                            </div>
+                            
+                        </form>
+                    </div>
                     <div class="title-hd">
                         <h2>PHIM ĐANG CHIẾU RẠP</h2>
                         <a  class="btn btn-default" href="/Phims">Tất cả<i class="ion-ios-arrow-right"></i></a>
