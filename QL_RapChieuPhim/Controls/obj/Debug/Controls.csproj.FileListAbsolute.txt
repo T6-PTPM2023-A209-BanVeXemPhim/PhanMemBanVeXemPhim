@@ -6,3 +6,4 @@ D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\bin\Debug\Control
 D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\bin\Debug\Controls.pdb
 D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\obj\Debug\Controls.dll
 D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\obj\Debug\Controls.pdb
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\Controls\obj\Debug\Controls.csprojResolveAssemblyReference.cache

@@ -64,3 +64,9 @@ D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Phong.resou
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_DatVe.resources
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_QLVe.resources
 D:\GitHub\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_DoanhThu.resources
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\Controls.dll
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\bin\Debug\Controls.pdb
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_CreateTK.resources
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_DoanhThu.resources
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_Phong.resources
+D:\HOC_TAP\github\PhanMemBanVeXemPhim\QL_RapChieuPhim\GUI\obj\Debug\GUI.Form_QLVe.resources
