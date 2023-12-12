@@ -8,7 +8,7 @@ namespace DAL_BLL
 {
    public class PhimBLL
     {
-        QUANLYRAPCHIEUPHIMDataContext qlphim = new QUANLYRAPCHIEUPHIMDataContext();
+       QUANLYRAPCHIEUPHIMDataContext qlphim = new QUANLYRAPCHIEUPHIMDataContext();
         public PhimBLL()
        {
 
@@ -70,6 +70,11 @@ namespace DAL_BLL
               
            }
           
+       }
+
+       public List<DataST> Load_Data()
+       {
+           return (from d in qlphim.DataSTs select d).ToList<DataST>();
        }
     }
 }

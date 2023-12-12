@@ -72,7 +72,7 @@ namespace GUI
             }
             else if (kq == 2)
             {
-                int q = taikhoan.GetID_TaiKhoan(txt_username.Text, txt_password.Text).Id;
+                int q = int.Parse(taikhoan.GetID_TaiKhoan(txt_username.Text, txt_password.Text).PhanQuyen);
                 if (q != 5)
                 {
                     MessageBox.Show("Đăng Nhập Thành Công");

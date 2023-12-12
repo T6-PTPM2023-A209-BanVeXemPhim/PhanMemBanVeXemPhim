@@ -62,13 +62,14 @@ namespace RapChieuPhim.Controllers
                     string id = ID.ToString();
 
                     List<Phim> listST = (from p in dbl.Phims where p.IdLoaiPhim.Contains(id.ToString()) select p).OrderByDescending(p => p.Id).ToList<Phim>();
+                    
                     ViewData["GoiY"] = listST;
-                    ViewData["gt"] = 1;
+                    ViewData["gt"] = id;
                  }
                 catch
                 {
                     ViewData["GoiY"] = (from p in dbl.Phims where p.IdLoaiPhim.Contains("phim") select p).OrderByDescending(p => p.Id).ToList<Phim>();
-                    ViewData["gt"] = 0;
+                    ViewData["gt"] = 100;
                 }
                 
             }

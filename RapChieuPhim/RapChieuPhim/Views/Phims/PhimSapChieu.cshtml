@@ -33,19 +33,16 @@
                     @foreach (var item in Model)
                     {
 
-                        if (item.TinhTrang == false)
-                        {
-                            <div class="movie-item-style-2 movie-item-style-1">
-                                <img src="/Content/Upload/Image/@item.AnhPhim" alt="">
-                                <div class="hvr-inner">
-                                    <a href="/Phims/DetatilPhims?id=@item.Id &&Name=@item.TenPhim+@item.TenPhim+@item.NgayCongChieu">Chi Tiết <i class="ion-android-arrow-dropright"></i> </a>
-                                </div>
-                                <div class="mv-item-infor">
-                                    <h6><a href="/Phims/DetatilPhims?id=@item.Id &&Name=@item.TenPhim+@item.TenPhim+@item.NgayCongChieu">@item.TenPhim</a></h6>
-                                    <p class="rate"><i class="ion-android-star"></i><span>8</span> /10</p>
-                                </div>
+                        <div class="movie-item-style-2 movie-item-style-1">
+                            <img src="/Content/Upload/Image/@item.AnhPhim" alt="">
+                            <div class="hvr-inner">
+                                <a href="/Phims/DetatilPhims?id=@item.Id &&Name=@item.TenPhim+@item.TenPhim+@item.NgayCongChieu">Chi Tiết <i class="ion-android-arrow-dropright"></i> </a>
                             </div>
-                        }
+                            <div class="mv-item-infor">
+                                <h6><a href="/Phims/DetatilPhims?id=@item.Id &&Name=@item.TenPhim+@item.TenPhim+@item.NgayCongChieu">@item.TenPhim</a></h6>
+                                <p class="rate"><i class="ion-android-star"></i><span>8</span> /10</p>
+                            </div>
+                        </div>
 
                     }
                 </div>

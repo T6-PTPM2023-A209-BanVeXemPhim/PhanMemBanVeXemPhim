@@ -25,8 +25,11 @@ namespace DAL_BLL.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-EKGAA51;Initial Catalog=QUANLYRAPCHIEUPHIM;Persist Security I" +
-            "nfo=True;User ID=sa;Password=123")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <ConnectionString>Data Source=DESKTOP-EKGAA51;Initial Catalog=QUANLYRAPCHIEUPHIM;Persist Security Info=True;User ID=sa;Password=123</ConnectionString>
+  <ProviderName>System.Data.SqlClient</ProviderName>
+</SerializableConnectionString>")]
         public string QUANLYRAPCHIEUPHIMConnectionString {
             get {
                 return ((string)(this["QUANLYRAPCHIEUPHIMConnectionString"]));

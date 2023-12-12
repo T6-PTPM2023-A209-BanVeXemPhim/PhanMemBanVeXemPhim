@@ -151,5 +151,13 @@ namespace GUI
 
             OpenForm(Program.frmDoanhThu);
         }
+
+        private void aIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmAI == null || Program.frmAI.IsDisposed)
+                Program.frmAI = new Form_AI();
+
+            OpenForm(Program.frmAI);
+        }
     }
 }

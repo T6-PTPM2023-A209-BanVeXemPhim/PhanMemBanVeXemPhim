@@ -38,6 +38,15 @@
       <Association Name="CaChieu_LichChieu" Member="LichChieus" ThisKey="IdCC" OtherKey="IdCC" Type="LichChieu" />
     </Type>
   </Table>
+  <Table Name="dbo.DataST" Member="DataSTs">
+    <Type Name="DataST">
+      <Column Name="STT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sothich1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sothich2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sothich3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="output" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.DatVe" Member="DatVes">
     <Type Name="DatVe">
       <Column Name="IDDatVe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -130,6 +139,13 @@
       <Association Name="Phong_LichChieu" Member="LichChieus" ThisKey="Id" OtherKey="IdPhong" Type="LichChieu" />
     </Type>
   </Table>
+  <Table Name="dbo.Quyen" Member="Quyens">
+    <Type Name="Quyen">
+      <Column Name="Id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenQuyen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Quyen_TaiKhoan" Member="TaiKhoans" ThisKey="Id" OtherKey="PhanQuyen" Type="TaiKhoan" />
+    </Type>
+  </Table>
   <Table Name="dbo.Suatchieu" Member="Suatchieus">
     <Type Name="Suatchieu">
       <Column Name="IdSC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -150,8 +166,8 @@
       <Association Name="TaiKhoan_BinhLuan" Member="BinhLuans" ThisKey="Id" OtherKey="IdTK" Type="BinhLuan" />
       <Association Name="TaiKhoan_Ve" Member="Ves" ThisKey="Id" OtherKey="IdTaiKhoan" Type="Ve" />
       <Association Name="TaiKhoan_DatVe" Member="DatVes" ThisKey="Id" OtherKey="IDTK" Type="DatVe" />
-      <Association Name="ThongTin_TaiKhoan" Member="ThongTin" ThisKey="id_ThongTin" OtherKey="ThongTin_id" Type="ThongTin" IsForeignKey="true" />
       <Association Name="Quyen_TaiKhoan" Member="Quyen" ThisKey="PhanQuyen" OtherKey="Id" Type="Quyen" IsForeignKey="true" />
+      <Association Name="ThongTin_TaiKhoan" Member="ThongTin" ThisKey="id_ThongTin" OtherKey="ThongTin_id" Type="ThongTin" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ThongTin" Member="ThongTins">
@@ -163,13 +179,6 @@
       <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="ThongTin_TaiKhoan" Member="TaiKhoans" ThisKey="ThongTin_id" OtherKey="id_ThongTin" Type="TaiKhoan" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Quyen" Member="Quyens">
-    <Type Name="Quyen">
-      <Column Name="Id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenQuyen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="Quyen_TaiKhoan" Member="TaiKhoans" ThisKey="Id" OtherKey="PhanQuyen" Type="TaiKhoan" />
     </Type>
   </Table>
 </Database>

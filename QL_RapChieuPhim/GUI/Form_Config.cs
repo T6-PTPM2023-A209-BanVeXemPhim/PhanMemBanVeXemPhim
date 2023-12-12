@@ -28,6 +28,7 @@ namespace GUI
             if (t == DialogResult.Yes)
             {
                 this.Dispose();
+                Program.frmDangNhap = new Form_DangNhap();
                 Program.frmDangNhap.qltk = new QL_TaiKhoan();
                 Program.frmDangNhap.Visible = true;
             }

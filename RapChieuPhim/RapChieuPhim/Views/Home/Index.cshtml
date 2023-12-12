@@ -83,6 +83,7 @@
                     {
                         <div class="title-hd">
                             <h2>Gợi Ý Cho Bạn</h2>
+                            <a class="btn btn-default" href="/Phims/phimsapchieu?Id=@ViewData["gt"]">Tất cả<i class="ion-ios-arrow-right"></i></a>
                         </div>
 
                         <div class="tabs">
@@ -112,13 +113,21 @@
                             </div>
                         </div>
                     }
-                    else if(ViewData["gt"].ToString() == "0")
+                    else if(ViewData["gt"].ToString() == "100")
                     {
                         <div class="title-hd">
                             <h2>Gợi Ý Cho Bạn</h2>
                             
                         </div>
                         <h6>Không có thông tin gợi ý!! vui lòng chọn lại sở thích cửa bạn</h6>
+                    }
+                    else if (ViewData["gt"].ToString() != "")
+                    {
+                        <div class="title-hd">
+                            <h2>Gợi Ý Cho Bạn</h2>
+
+                        </div>
+                        <h6>Không có phim phù hợp!!</h6>
                     }
                     <br />
 
